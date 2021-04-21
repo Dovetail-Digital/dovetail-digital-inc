@@ -80,6 +80,9 @@ export default {
     feature: {
       py: [8, null, 9, null, null, 10],
     },
+    team: {
+      py: [8, null, 9, null, null, 10],
+    },
     profit: {
       py: [8, null, 9, null, null, 10],
       backgroundColor: 'background_secondary',

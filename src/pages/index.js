@@ -8,8 +8,8 @@ import About from 'sections/about';
 import BusinessProfit from 'sections/business-profit';
 import Knowledge from 'sections/knowledge';
 import ClientFeedback from 'sections/client-feedback';
+import TeamSection from '../sections/team-section';
 import WorkFlow from 'sections/workflow';
-import Support from 'sections/support';
 import Subscribe from 'sections/subscribe';
 
 export default function IndexPage() {
@@ -23,10 +23,10 @@ export default function IndexPage() {
         <Hero />
         <About />
         <WorkFlow />
+        <TeamSection />
         <ClientFeedback />
         <BusinessProfit />
         <Knowledge />
-        <Support />
         <Subscribe />
       </Layout>
     </ThemeProvider>

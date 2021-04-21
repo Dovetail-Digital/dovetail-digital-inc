@@ -155,13 +155,13 @@ const styles = {
   subscribeForm: {
     mt: [6, null, null, 7],
     backgroundColor: ['transparent', 'white'],
-    borderRadius: [0, 50],
+    borderRadius: [0, 6],
     overflow: 'hidden',
     p: [0, 1],
     flexDirection: ['column', 'row'],
     '[type="email"]': {
       border: 0,
-      borderRadius: 50,
+      borderRadius: 6,
       fontFamily: 'body',
       fontSize: ['14px', null, 2],
       fontWeight: 500,
