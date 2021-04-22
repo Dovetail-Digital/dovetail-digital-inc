@@ -3,7 +3,7 @@ import { jsx } from 'theme-ui';
 import { Container, Grid } from 'theme-ui';
 import SectionHeader from 'components/section-header';
 import TeamCard from 'components/team-card';
-import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 
 import Member1 from 'assets/team/member-1.png';
 import Member2 from 'assets/team/member-2.png';
@@ -16,19 +16,13 @@ const data = [
     imgSrc: Member1,
     altText: 'Jesse Grunert',
     title: 'Jesse Grunert',
-    designation: 'CEO and Founder',
+    designation: 'CTO',
     socialProfile: [
       {
         id: 1,
-        name: 'facebook',
+        name: 'linkedIn',
         path: '#',
-        icon: <FaFacebookF />,
-      },
-      {
-        id: 2,
-        name: 'twitter',
-        path: '#',
-        icon: <FaTwitter />,
+        icon: <FaLinkedinIn />,
       },
       {
         id: 3,
@@ -43,19 +37,13 @@ const data = [
     imgSrc: Member2,
     altText: 'Tyler Marshall',
     title: 'Tyler Marshall',
-    designation: 'CEO and Founder',
+    designation: 'COO and Founder',
     socialProfile: [
       {
         id: 1,
-        name: 'facebook',
+        name: 'linkedIn',
         path: '#',
-        icon: <FaFacebookF />,
-      },
-      {
-        id: 2,
-        name: 'twitter',
-        path: '#',
-        icon: <FaTwitter />,
+        icon: <FaLinkedinIn />,
       },
       {
         id: 3,
@@ -70,19 +58,34 @@ const data = [
     imgSrc: Member3,
     altText: 'Will Zittlau',
     title: 'Will Zittlau',
-    designation: 'Developer',
+    designation: 'Shopify Expert',
     socialProfile: [
       {
         id: 1,
-        name: 'facebook',
+        name: 'linkedIn',
         path: '#',
-        icon: <FaFacebookF />,
+        icon: <FaLinkedinIn />,
       },
       {
-        id: 2,
-        name: 'twitter',
+        id: 3,
+        name: 'instagram',
         path: '#',
-        icon: <FaTwitter />,
+        icon: <FaInstagram />,
+      },
+    ],
+  },
+  {
+    id: 3,
+    imgSrc: Member3,
+    altText: 'Ben Grunert',
+    title: 'Ben Grunert',
+    designation: 'Shopify Expert',
+    socialProfile: [
+      {
+        id: 1,
+        name: 'linkedIn',
+        path: '#',
+        icon: <FaLinkedinIn />,
       },
       {
         id: 3,
@@ -94,9 +97,9 @@ const data = [
   },
 ];
 
-export default function TeamSection() {
+export default function Team() {
   return (
-    <section sx={{ variant: 'section.team' }}>
+    <section sx={{ variant: 'section.team' }} id="contact">
       <Container>
         <SectionHeader
           title="Meet our team"

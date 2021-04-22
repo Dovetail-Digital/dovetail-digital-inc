@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <footer sx={styles.footer}>
       <Container>
-        <Grid sx={styles.widgets}>
+        {/* <Grid sx={styles.widgets}>
           {data.widgets.map((item) => (
             <Box
               key={`footer-widget--key${item.id}`}
@@ -22,7 +22,7 @@ export default function Footer() {
               </Box>
             </Box>
           ))}
-        </Grid>
+        </Grid> */}
         {/* End of footer widgets area */}
         <Box sx={styles.footer.footerBottomArea}>
           <Link path="/">

@@ -83,25 +83,26 @@ export default {
     team: {
       py: [8, null, 9, null, null, 10],
     },
-    profit: {
+    printing: {
       py: [8, null, 9, null, null, 10],
+      position: 'relative',
+    },
+    shopify: {
+      pt: [8, null, 9, null, null, 10],
+      pb: [0, null, null, 2, 5],
       backgroundColor: 'background_secondary',
       position: 'relative',
     },
-    knowledge: {
-      pt: [8, null, 9, null, null, 10],
-      pb: [0, null, null, 2, 5],
+    customSoftware: {
+      py: [8, null, 9, null, null, 10],
     },
     feedback: {
       py: [8, null, 9, null, null, 10],
+      backgroundColor: 'background_secondary',
     },
     workflow: {
       py: [8, null, 9, null, null, 10],
       backgroundColor: 'background_secondary',
-    },
-    support: {
-      pt: [8, null, 9, null, null, 10],
-      pb: [8, null, 9, null, null, 9],
     },
   },
   sectionHeader: {

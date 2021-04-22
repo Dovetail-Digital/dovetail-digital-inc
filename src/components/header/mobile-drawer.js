@@ -7,9 +7,7 @@ import { IoMdClose, IoMdMenu } from 'react-icons/io';
 import { Link } from 'react-scroll';
 import {
   FaFacebookF,
-  FaTwitter,
-  FaGithub,
-  FaDribbble,
+  FaLinkedinIn,
 } from 'react-icons/fa';
 import menuItems from './header.data';
 
@@ -20,15 +18,7 @@ const social = [
   },
   {
     path: 'https://twitter.com/',
-    icon: <FaTwitter />,
-  },
-  {
-    path: 'https://github.com/',
-    icon: <FaGithub />,
-  },
-  {
-    path: 'https://dribbble.com/',
-    icon: <FaDribbble />,
+    icon: <FaLinkedinIn />,
   },
 ];
 

@@ -40,7 +40,7 @@ export default function About() {
       <Container>
         <SectionHeader 
           title="Who we are"
-          description="A boutique development service with focus/experience in Web, Mobile, and eCommerce. We strive to stay at the forefront of techonology and are always excited to expand our expertise. No idea is too big, and no project is too small."
+          description="A boutique development service with focus/experience in 3D Printing, Web, Mobile, and eCommerce. We strive to stay at the forefront of techonology and are always excited to expand our expertise. No idea is too big, and no project is too small."
         />
 
         <Grid sx={styles.grid}>

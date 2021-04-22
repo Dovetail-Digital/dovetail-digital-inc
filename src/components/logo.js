@@ -14,7 +14,7 @@ export default function Logo({ src, ...rest }) {
       }}
       {...rest}
     >
-      <Image src={src} alt="startup landing logo" />
+      <Image src={src} alt="dovetail digital logo" />
     </Link>
   );
 }

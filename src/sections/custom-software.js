@@ -4,12 +4,11 @@ import TextFeature from 'components/text-feature';
 import Image from 'components/image';
 import { IoIosCheckmarkCircle } from 'react-icons/io';
 
-import ProfitThumb from 'assets/images/business-profit.png';
-import DrawingArrow from 'assets/drawing-arrow.svg';
+import ProfitThumb from 'assets/images/custom-software.png';
 
 const data = {
   title:
-    'We help you to boost your business profitable with our talent marketer',
+    'Custom Software',
   description:
     'Get your tests delivered at let home collect sample from the victory of the managements that supplies best design system guidelines ever.',
   btnName: 'Explore Details',
@@ -26,9 +25,9 @@ const data = {
   ],
 };
 
-export default function BusinessProfit() {
+export default function CustomSoftware() {
   return (
-    <section sx={{ variant: 'section.profit' }}>
+    <section sx={{ variant: 'section.customSoftware' }}>
       <Container sx={styles.containerBox}>
         <Box sx={styles.thumbnail}>
           <Image src={ProfitThumb} alt="Thumbnail" width="700" height="565" />
@@ -43,9 +42,6 @@ export default function BusinessProfit() {
           />
         </Box>
       </Container>
-      <Box sx={styles.bottomArrow}>
-        <Image src={DrawingArrow} alt="Arrow" />
-      </Box>
     </section>
   );
 }
@@ -77,11 +73,5 @@ const styles = {
     '.btn__link': {
       mt: [4, null, 5],
     },
-  },
-  bottomArrow: {
-    position: 'absolute',
-    bottom: -185,
-    left: '33%',
-    display: ['none', null, null, null, null, null, null, 'block'],
   },
 };

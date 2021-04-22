@@ -5,12 +5,12 @@ import SEO from 'components/seo';
 import Layout from 'components/layout';
 import Hero from 'sections/hero';
 import About from 'sections/about';
-import BusinessProfit from 'sections/business-profit';
-import Knowledge from 'sections/knowledge';
+import Printing from 'sections/3d-printing';
+import Shopify from 'sections/shopify';
 import ClientFeedback from 'sections/client-feedback';
-import TeamSection from '../sections/team-section';
+import Team from 'sections/team';
 import WorkFlow from 'sections/workflow';
-import Subscribe from 'sections/subscribe';
+import CustomSoftware from 'sections/custom-software';
 
 export default function IndexPage() {
   return (
@@ -23,11 +23,11 @@ export default function IndexPage() {
         <Hero />
         <About />
         <WorkFlow />
-        <TeamSection />
+        <Printing />
+        <Shopify />
+        <CustomSoftware />
         <ClientFeedback />
-        <BusinessProfit />
-        <Knowledge />
-        <Subscribe />
+        <Team />
       </Layout>
     </ThemeProvider>
   );

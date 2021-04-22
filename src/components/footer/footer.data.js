@@ -1,7 +1,7 @@
 import Chat from 'assets/widget/chat.svg';
 import Community from 'assets/widget/community.svg';
 import Github from 'assets/widget/github.svg';
-import { FaFacebook, FaTwitter, FaGithub, FaDribbble } from 'react-icons/fa';
+import { FaFacebook, FaLinkedin, } from 'react-icons/fa';
 
 export default {
   widgets: [
@@ -37,15 +37,7 @@ export default {
     },
     {
       path: '/',
-      label: 'Adversite',
-    },
-    {
-      path: '/',
-      label: 'Supports',
-    },
-    {
-      path: '/',
-      label: 'Marketing',
+      label: 'Careers',
     },
     {
       path: 'mailto:admin@dovetaildigital.ca',
@@ -61,21 +53,9 @@ export default {
     },
     {
       path: '/',
-      label: 'Twitter',
-      name: 'twitter',
-      icon: <FaTwitter />,
-    },
-    {
-      path: '/',
-      label: 'Github',
-      name: 'github',
-      icon: <FaGithub />,
-    },
-    {
-      path: '/',
-      label: 'Dribbble',
-      name: 'dribbble',
-      icon: <FaDribbble />,
+      label: 'LinkedIn',
+      name: 'linkedIn',
+      icon: <FaLinkedin />,
     },
   ]
 };
