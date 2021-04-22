@@ -11,17 +11,21 @@ const data = {
   title:
     '3D Printing Services',
   description:
-    'Get your tests delivered at let home collect sample from the victory of the managements that supplies best design system guidelines ever.',
+    'A wide variety of printers, filaments, and colors. We can help you model and print almost anything! We also offer on demand printing services if you have a 3D model.',
   btnName: 'Get in touch',
   btnURL: 'mailto:hello@dovetaildigital.ca',
   points: [
     {
       icon: <IoIosCheckmarkCircle color="#83C1C0" />,
-      text: 'Unlimited design possibility',
+      text: '3D modelling services',
     },
     {
       icon: <IoIosCheckmarkCircle color="#83C1C0" />,
-      text: 'Completely responsive features',
+      text: 'Variety of filament materials and colors',
+    },
+    {
+      icon: <IoIosCheckmarkCircle color="#83C1C0" />,
+      text: 'On demand printing',
     },
   ],
 };

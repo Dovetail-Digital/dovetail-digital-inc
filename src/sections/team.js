@@ -58,7 +58,7 @@ const data = [
     imgSrc: Member3,
     altText: 'Will Zittlau',
     title: 'Will Zittlau',
-    designation: 'Shopify Expert',
+    designation: 'Wears Many Hats',
     socialProfile: [
       {
         id: 1,

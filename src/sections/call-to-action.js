@@ -27,8 +27,7 @@ const styles = {
   wrapper: {
     position: "relative",
     zIndex: "10",
-    top: "-60px",
-    pb: [8, 9],
+    top: -7,
   },
   container: {
     px: [0, "0 !important", "30px !important"],

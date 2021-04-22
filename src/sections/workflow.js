@@ -8,19 +8,19 @@ const data = [
     id: 1,
     title: 'Connect with us',
     text:
-      'Our homes are designed to be move-in ready. Think furnished common areas, super fast wifi, and flexible leases.',
+      'After an initial contact, we will schedule a meeting with you to discuss the project and set up expectations and deliverables.',
   },
   {
     id: 2,
     title: 'Communication & build',
     text:
-      'Our homes are designed to be move-in ready. Think furnished common areas, super fast wifi, and flexible leases.',
+      'We start building your vision! During this phase we continue communication in order to keep aligned and receive feedback.',
   },
   {
     id: 3,
     title: 'We deliver',
     text:
-      'Our homes are designed to be move-in ready. Think furnished common areas, super fast wifi, and flexible leases.',
+      'Once the project has met your needs, we hand it off and perform an exit interview. We are always there for support if something comes up down the road!',
   },
 ];
 

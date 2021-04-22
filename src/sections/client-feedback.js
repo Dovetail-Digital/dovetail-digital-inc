@@ -12,7 +12,7 @@ export default function ClientFeedback() {
       <Container>
         <SectionHeader
           title="We promise 100% satisfaction, every time."
-          description="As a boutique agency we hold your satisfaction above all else."
+          description="As a small agency we hold your satisfaction above all else. We go above and beyond to maintain concise communication and ensure our delivery meets or exceeds your expectations."
         />
 
         <Box sx={styles.thumbWrapper}>

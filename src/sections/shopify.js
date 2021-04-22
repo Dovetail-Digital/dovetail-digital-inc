@@ -10,17 +10,21 @@ import DrawingArrow from 'assets/drawing-arrow.svg';
 const data = {
   title: 'Shopify Experts',
   description:
-    'Get your tests delivered at let home collect sample from the victory of the managements that supplies best design system guidelines ever. Get your tests delivered at let home collect sample.',
+    'Need to take your brick and mortar store online? Already have a Shopify store but need custom development / app integrations? We have you covered. ',
     btnName: 'Get in touch',
     btnURL: 'mailto:hello@dovetaildigital.ca',
     points: [
       {
         icon: <IoIosCheckmarkCircle color="#83C1C0" />,
-        text: 'Unlimited design possibility',
+        text: 'Site Setup (payments, products, UI/UX, etc)',
       },
       {
         icon: <IoIosCheckmarkCircle color="#83C1C0" />,
-        text: 'Completely responsive features',
+        text: 'App & Social Media Integrations',
+      },
+      {
+        icon: <IoIosCheckmarkCircle color="#83C1C0" />,
+        text: 'Custom development',
       },
     ],
 };
