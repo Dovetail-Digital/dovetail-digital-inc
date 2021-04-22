@@ -5,15 +5,12 @@ import SectionHeader from 'components/section-header';
 import TeamCard from 'components/team-card';
 import { FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 
-import Member1 from 'assets/team/member-1.png';
-import Member2 from 'assets/team/member-2.png';
-import Member3 from 'assets/team/member-3.png';
-
+import Member from 'assets/team/member.png';
 
 const data = [
   {
     id: 1,
-    imgSrc: Member1,
+    imgSrc: Member,
     altText: 'Jesse Grunert',
     title: 'Jesse Grunert',
     designation: 'CTO',
@@ -34,7 +31,7 @@ const data = [
   },
   {
     id: 2,
-    imgSrc: Member2,
+    imgSrc: Member,
     altText: 'Tyler Marshall',
     title: 'Tyler Marshall',
     designation: 'COO and Founder',
@@ -55,7 +52,7 @@ const data = [
   },
   {
     id: 3,
-    imgSrc: Member3,
+    imgSrc: Member,
     altText: 'Will Zittlau',
     title: 'Will Zittlau',
     designation: 'Wears Many Hats',
@@ -76,7 +73,7 @@ const data = [
   },
   {
     id: 3,
-    imgSrc: Member3,
+    imgSrc: Member,
     altText: 'Ben Grunert',
     title: 'Ben Grunert',
     designation: 'Shopify Expert',

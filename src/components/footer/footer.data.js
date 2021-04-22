@@ -36,23 +36,23 @@ export default {
       label: 'Home',
     },
     {
-      path: '/',
+      path: 'mailto:admin@dovetaildigital.ca',
       label: 'Careers',
     },
     {
-      path: 'mailto:admin@dovetaildigital.ca',
+      path: 'mailto:hello@dovetaildigital.ca',
       label: 'Contact',
     },
   ],
   socials: [
     {
-      path: '/',
+      path: 'https://www.facebook.com/dovetaildigital',
       label: 'Facebook',
       name: 'facebook',
       icon: <FaFacebook />,
     },
     {
-      path: '/',
+      path: 'https://www.linkedin.com/company/dovetaildigital/',
       label: 'LinkedIn',
       name: 'linkedIn',
       icon: <FaLinkedin />,

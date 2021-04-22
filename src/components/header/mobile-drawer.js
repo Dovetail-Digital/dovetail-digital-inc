@@ -13,11 +13,11 @@ import menuItems from './header.data';
 
 const social = [
   {
-    path: 'https://www.facebook.com',
+    path: 'https://www.facebook.com/dovetaildigital',
     icon: <FaFacebookF />,
   },
   {
-    path: 'https://twitter.com/',
+    path: 'https://www.linkedin.com/company/dovetaildigital/',
     icon: <FaLinkedinIn />,
   },
 ];

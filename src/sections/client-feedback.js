@@ -4,7 +4,7 @@ import { Container, Box } from 'theme-ui';
 import SectionHeader from 'components/section-header';
 import Image from 'components/image';
 
-import Client from 'assets/images/client-thumb.png';
+import Review from 'assets/images/review.png';
 
 export default function ClientFeedback() {
   return (
@@ -17,8 +17,8 @@ export default function ClientFeedback() {
 
         <Box sx={styles.thumbWrapper}>
           <Image
-            src={Client}
-            alt="Clients Thumbnail"
+            src={Review}
+            alt="satisfaction garunteed"
             width="891"
             height="297"
           />
@@ -35,7 +35,7 @@ const styles = {
     px: 4,
     pb: [0, null, null, null, null, null, null, null, 6],
     img: {
-      height: [100, 'auto'],
+      height: 'auto',
     },
   },
 };
