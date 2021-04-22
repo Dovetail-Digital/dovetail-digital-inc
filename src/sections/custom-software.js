@@ -2,7 +2,6 @@
 import { jsx, Container, Box } from 'theme-ui';
 import TextFeature from 'components/text-feature';
 import Image from 'components/image';
-import { IoIosCheckmarkCircle } from 'react-icons/io';
 
 import ProfitThumb from 'assets/images/custom-software.png';
 
@@ -11,18 +10,8 @@ const data = {
     'Custom Software',
   description:
     'Get your tests delivered at let home collect sample from the victory of the managements that supplies best design system guidelines ever.',
-  btnName: 'Explore Details',
-  btnURL: '#',
-  points: [
-    {
-      icon: <IoIosCheckmarkCircle />,
-      text: 'Unlimited design possibility',
-    },
-    {
-      icon: <IoIosCheckmarkCircle />,
-      text: 'Completely responsive features',
-    },
-  ],
+    btnName: 'Get in touch',
+    btnURL: 'mailto:hello@dovetaildigital.ca',
 };
 
 export default function CustomSoftware() {
@@ -38,7 +27,6 @@ export default function CustomSoftware() {
             description={data.description}
             btnName={data.btnName}
             btnURL={data.btnURL}
-            points={data.points}
           />
         </Box>
       </Container>

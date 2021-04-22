@@ -4,33 +4,33 @@ import { Container, Grid } from 'theme-ui';
 import SectionHeader from 'components/section-header';
 import FeatureCard from 'components/feature-card.js';
 import Marketplace from 'assets/feature/marketplace.svg';
-import Gift from 'assets/feature/gift.svg';
-import Award from 'assets/feature/award.svg';
+import Print from 'assets/feature/print.svg';
+import Code from 'assets/feature/code.svg';
 
 const data = [
   {
     id: 1,
     imgSrc: Marketplace,
-    altText: 'Marketplace',
-    title: 'Trusted marketplace',
+    altText: 'eCommerce',
+    title: 'Shopify Experts',
     text:
-      'Our homes are designed to be move-in ready. Think furnished common areas, super fast wifi, and flexible leases.',
+      'We\'ll take your business online in a week or less. Custom app development available.',
   },
   {
     id: 2,
-    imgSrc: Gift,
-    altText: 'Gift',
-    title: 'Customer Gift vouchers',
+    imgSrc: Print,
+    altText: '3D Printing',
+    title: 'On Demand 3D Printing',
     text:
-      'Our homes are designed to be move-in ready. Think furnished common areas, super fast wifi, and flexible leases.',
+      'High quality printers with a large varierty of filament options.',
   },
   {
     id: 3,
-    imgSrc: Award,
-    altText: 'Awards',
-    title: 'Multiple Awards wins',
+    imgSrc: Code,
+    altText: 'Code',
+    title: 'Custom Software Development',
     text:
-      'Our homes are designed to be move-in ready. Think furnished common areas, super fast wifi, and flexible leases.',
+      'Specializing in Shopify, Flutter, React and serverless deployment.',
   },
 ];
 

@@ -2,16 +2,27 @@
 import { jsx, Container, Box } from 'theme-ui';
 import TextFeature from 'components/text-feature';
 import Image from 'components/image';
+import { IoIosCheckmarkCircle } from 'react-icons/io';
 
 import KnowledgeThumb from 'assets/images/ecommerce.png';
 import DrawingArrow from 'assets/drawing-arrow.svg';
 
 const data = {
-  title: 'we are committed to using fact-based knowledge to our customers',
+  title: 'Shopify Experts',
   description:
     'Get your tests delivered at let home collect sample from the victory of the managements that supplies best design system guidelines ever. Get your tests delivered at let home collect sample.',
-  btnName: 'Explore Details',
-  btnURL: '#',
+    btnName: 'Get in touch',
+    btnURL: 'mailto:hello@dovetaildigital.ca',
+    points: [
+      {
+        icon: <IoIosCheckmarkCircle color="#83C1C0" />,
+        text: 'Unlimited design possibility',
+      },
+      {
+        icon: <IoIosCheckmarkCircle color="#83C1C0" />,
+        text: 'Completely responsive features',
+      },
+    ],
 };
 
 export default function Shopify() {
@@ -24,6 +35,7 @@ export default function Shopify() {
             description={data.description}
             btnName={data.btnName}
             btnURL={data.btnURL}
+            points={data.points}
           />
         </Box>
         <Box sx={styles.thumbnail}>

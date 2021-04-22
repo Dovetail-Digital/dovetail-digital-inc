@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import Router from 'next/router';
 import { initGA, logPageView } from 'analytics';
 import '../theme/global.css'
-// Load Typeface Fonts
+// Load fallback Typeface Fonts
 import 'typeface-dm-sans';
 import 'typeface-bree-serif';
 import 'typeface-roboto-slab';

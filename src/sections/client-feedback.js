@@ -11,8 +11,8 @@ export default function ClientFeedback() {
     <section sx={{ variant: 'section.feedback' }} id="feedback">
       <Container>
         <SectionHeader
-          title="More than thousand of user we have worldwide with happy feedback"
-          description="Focus only on the meaning, we take care of the design. As soon as the meeting end you can export in one click into your preferred."
+          title="We promise 100% satisfaction, every time."
+          description="As a boutique agency we hold your satisfaction above all else."
         />
 
         <Box sx={styles.thumbWrapper}>

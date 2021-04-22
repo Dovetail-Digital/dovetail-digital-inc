@@ -9,18 +9,18 @@ import DrawingArrow from 'assets/drawing-arrow.svg';
 
 const data = {
   title:
-    'We help you to boost your business profitable with our talent marketer',
+    '3D Printing Services',
   description:
     'Get your tests delivered at let home collect sample from the victory of the managements that supplies best design system guidelines ever.',
-  btnName: 'Explore Details',
-  btnURL: '#',
+  btnName: 'Get in touch',
+  btnURL: 'mailto:hello@dovetaildigital.ca',
   points: [
     {
-      icon: <IoIosCheckmarkCircle />,
+      icon: <IoIosCheckmarkCircle color="#83C1C0" />,
       text: 'Unlimited design possibility',
     },
     {
-      icon: <IoIosCheckmarkCircle />,
+      icon: <IoIosCheckmarkCircle color="#83C1C0" />,
       text: 'Completely responsive features',
     },
   ],

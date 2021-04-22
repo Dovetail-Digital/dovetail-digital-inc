@@ -7,15 +7,15 @@ import { DrawerProvider } from 'contexts/drawer/drawer.provider';
 import MobileDrawer from './mobile-drawer';
 import menuItems from './header.data';
 
-import LogoDark from 'assets/logo-dark.svg';
-import Divider from 'assets/divider.svg';
+import LogoWhite from 'assets/brand/logo-white.svg';
+
 
 export default function Header({ className }) {
   return (
     <DrawerProvider>
       <header sx={styles.header} className={className} id="header">
         <Container sx={styles.container}>
-          <Logo src={LogoDark} />
+          <Logo src={LogoWhite} />
 
           <Flex as="nav" sx={styles.nav}>
             {menuItems.map(({ path, label }, i) => (
