@@ -70,7 +70,7 @@ const styles = {
     mx: ['auto', 0],
     img: {
       ml: [0, null, null, -3],
-      height: [265, 'auto'],
+      height: 'auto',
     },
   },
   contentBox: {

@@ -11,6 +11,7 @@ import ClientFeedback from 'sections/client-feedback';
 import Team from 'sections/team';
 import WorkFlow from 'sections/workflow';
 import CustomSoftware from 'sections/custom-software';
+import CallToAction from 'sections/call-to-action';
 
 export default function IndexPage() {
   return (
@@ -28,6 +29,7 @@ export default function IndexPage() {
         <CustomSoftware />
         <ClientFeedback />
         <Team />
+        <CallToAction />
       </Layout>
     </ThemeProvider>
   );
