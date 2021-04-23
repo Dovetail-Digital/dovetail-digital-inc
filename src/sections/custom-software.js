@@ -10,7 +10,7 @@ const data = {
   title:
     'Custom Software',
   description:
-    'We also offer custom development services. We have experience in Flutter, React, Drupal, Shopify and delpoying serverless applications.',
+    'We also offer custom development services. We have experience in Flutter, React, Drupal, Shopify and deploying serverless applications.',
     btnName: 'Get in touch',
     btnURL: 'mailto:hello@dovetaildigital.ca',
     points: [
