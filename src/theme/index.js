@@ -3,28 +3,19 @@ export default {
   colors: {
     text: '#343D48', // body color and primary color
     text_secondary: '#02073E', // secondary body color
-    heading: '#0F2137', // primary heading color
+    heading: '#343D48', // primary heading color
     heading_secondary: '#02073E', // heading color
     background: '#FFFFFF', // body background color
     background_secondary: '#F9FAFC', // secondary background color
-    border_color: '#E5ECF4', // border color
+    muted: '#B9BABC', // muted color
+    border_color: '#B9BABC', // border color
     primary: '#83C1C0', // primary button and link color
     secondary: '#71B0B4', // secondary color - can be used for hover states
     background_brand: '#B7DDE1',
-    muted: '#7B8188', // muted color
-    accent: '#609', // a contrast color for emphasizing UI
-
-    // highlight	a background color for highlighting text
-    modes: {
-      dark: {
-        text: '#fff',
-        background: '#000',
-        primary: '#0cf',
-        secondary: '#09c',
-        muted: '#111',
-      },
-    },
+    accent: '#EA3A60', // a contrast color for emphasizing UI
+    accent_secondary: '#F9CED7',
   },
+  
   breakpoints: [
     '480px',
     '640px',
