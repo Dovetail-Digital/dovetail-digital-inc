@@ -16,7 +16,7 @@ const data = {
     points: [
       {
         icon: <IoIosCheckmarkCircle color="#83C1C0" />,
-        text: 'Unlimited design possibility',
+        text: 'Unlimited design possibilities',
       },
       {
         icon: <IoIosCheckmarkCircle color="#83C1C0" />,
