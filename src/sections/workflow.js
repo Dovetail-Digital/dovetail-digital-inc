@@ -8,7 +8,7 @@ const data = [
     id: 1,
     title: 'Connect with us',
     text:
-      'After an initial contact, we will schedule a meeting with you to discuss the project and set up expectations and deliverables.',
+      'After initial contact, we will schedule a consultation to discuss the project and provide next steps.',
   },
   {
     id: 2,
@@ -30,7 +30,7 @@ export default function WorkFlow() {
       <Container>
         <SectionHeader
           title="Let’s see how it works"
-          description="All you need is an idea - we'll take care of the logistics and design. We ensure quality communication and transparency to make sure that the finished result meets or exceeds your vision."
+          description="All you need is an idea - we'll take care of the logistics and design. We ensure quality, communication, and transparency to make sure that the finished result meets or exceeds your vision."
         />
 
         <Grid sx={styles.grid}>

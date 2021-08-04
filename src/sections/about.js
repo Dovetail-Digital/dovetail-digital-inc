@@ -22,7 +22,7 @@ const data = [
     altText: '3D Printing',
     title: 'On Demand 3D Printing',
     text:
-      'High quality printers with a large varierty of filament options.',
+      'High quality printers with a large variety of filament options. Experience with custom design for industrial applications.',
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ const data = [
     altText: 'Code',
     title: 'Custom Software Development',
     text:
-      'Specializing in Shopify, Flutter, React and serverless deployment.',
+      'Specializing in custom Shopify implementations, Flutter, React and serverless deployment.',
   },
 ];
 
