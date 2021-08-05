@@ -1,19 +1,28 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
 import { Container, Box, Heading, Button } from "theme-ui";
-
+import Image from 'components/image';
+import TeamBuilding from 'assets/images/standout.png';
 import Arrow from "assets/mail-arrow.svg";
 
-export default function CallToAction() {
+export default function GeneralApplication() {
   return (
     <div sx={styles.wrapper} id="contact">
       <Container sx={styles.container}>
+      <Box sx={styles.thumbWrapper}>
+          <Image
+            src={TeamBuilding}
+            alt="satisfaction garunteed"
+            width="891"
+            height="297"
+          />
+        </Box>
         <Box sx={styles.contentBox}>
-          <Heading sx={styles.heading}>Ready? Get in touch with us!</Heading>
+          <Heading sx={styles.heading}>Don't see a posting but think you'll stand out?</Heading>
           <Box sx={styles.btnWrapper}>
-            <a href="mailto:hello@dovetaildigital.ca">
+            <a href="mailto:careers@dovetaildigital.ca">
               <Button variant="whiteButton" aria-label="Contact Us">
-                CONTACT US NOW
+                CONTACT US HERE
               </Button>
             </a>
           </Box>
@@ -70,6 +79,15 @@ const styles = {
       left: "50%",
       transform: "translateX(-50%)",
       display: ["none", null, null, "block"],
+    },
+  },
+  thumbWrapper: {
+    display: 'flex',
+    justifyContent: 'center',
+    px: 4,
+    pb: [0, null, null, null, null, null, null, null, 6],
+    img: {
+      height: 'auto',
     },
   },
 };

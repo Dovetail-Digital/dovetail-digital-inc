@@ -36,7 +36,7 @@ export default {
       label: 'Home',
     },
     {
-      path: 'mailto:hello@dovetaildigital.ca',
+      path: '/careers',
       label: 'Careers',
     },
     {

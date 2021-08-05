@@ -11,7 +11,7 @@ export default function ScrollToContent() {
 
   // Show button when page is scorlled upto given distance
   const toggleVisibility = () => {
-    if (window.pageYOffset < 100) {
+    if (window.pageYOffset < 50) {
       setIsVisible(true);
     } else {
       setIsVisible(false);
