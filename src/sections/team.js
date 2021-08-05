@@ -13,7 +13,7 @@ const data = [
     imgSrc: Member,
     altText: 'Jesse Grunert',
     title: 'Jesse Grunert',
-    designation: 'CTO',
+    designation: 'CTO and Founder',
     socialProfile: [
       {
         id: 1,
@@ -55,7 +55,7 @@ const data = [
     imgSrc: Member,
     altText: 'Will Zittlau',
     title: 'Will Zittlau',
-    designation: 'Wears Many Hats',
+    designation: 'Developer',
     socialProfile: [
       {
         id: 1,

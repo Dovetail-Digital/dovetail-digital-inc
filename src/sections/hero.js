@@ -19,7 +19,7 @@ canvas.height = 600;
     <section sx={styles.banner} id="home">
       <Container sx={styles.banner.container}>
         <Box sx={styles.banner.contentBox}>
-          <Heading as="h1" variant="heroPrimary">
+          <Heading as="h1" variant="heroPrimary" style={{textAlign: "center"}}>
           <Typed strings={textLines} typeSpeed={60} loop={true} backSpeed={30} backDelay={2000} />
           </Heading>
           <Text as="p" variant="heroSecondary">
@@ -27,9 +27,9 @@ canvas.height = 600;
           </Text>
         </Box>
 
-        <Box sx={styles.banner.imageBox}>
-          <div sx={styles.banner.lottie} style={{width:"800px", height:"800px"}} class="lottie" data-animation-path="/scrolling-phone.json" data-anim-loop="true" data-preserve-aspect-ratio ="xMidYMid slice" data-name="phoneAnimation"></div>
-        </Box>
+        {/* <Box sx={styles.banner.imageBox}>
+          <div sx={styles.banner.lottie} style={{width:"800px", height:"fit-content"}} class="lottie" data-animation-path="/scrolling-phone.json" data-anim-loop="true" data-preserve-aspect-ratio ="xMidYMid meet" data-name="phoneAnimation"></div>
+        </Box> */}
       </Container>
     </section>
   );
@@ -66,7 +66,7 @@ const styles = {
       mx: [0, "auto"],
       textAlign: ["center", null, null, null, "left"],
       '@media screen and (max-width: 880px)': {
-        mb: "0",
+        mb: "auto",
         }
     },
     imageBox: {
