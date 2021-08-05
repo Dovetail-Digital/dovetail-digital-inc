@@ -11,6 +11,7 @@
     "deploy": "vercel --prod"
   },
   "dependencies": {
+    "@emotion/react": "^11.4.0",
     "framer-motion": "^2.9.4",
     "isomorphic-unfetch": "^3.1.0",
     "lottie-web": "^5.7.8",

@@ -37,7 +37,7 @@ canvas.height = 600;
 
 const styles = {
   banner: {
-    pt: ["150px","150px","150px", "150px", "0"],
+    pt: ["30px","100px","100px", "100px", "0"],
     backgroundColor: "background_brand",
     overflow: ["hidden", "initial", null, null, "hidden"],
     pb: [0, null, null, null, 2],

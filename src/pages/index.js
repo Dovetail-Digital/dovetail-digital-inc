@@ -12,6 +12,7 @@ import Team from 'sections/team';
 import WorkFlow from 'sections/workflow';
 import CustomSoftware from 'sections/custom-software';
 import CallToAction from 'sections/call-to-action';
+import ScrollToContent from 'components/scroll-to-content';
 
 export default function IndexPage() {
   return (
@@ -22,6 +23,7 @@ export default function IndexPage() {
           title="Dovetail Digital"
         />
         <Hero />
+        <ScrollToContent />
         <About />
         <WorkFlow />
         <Printing />
