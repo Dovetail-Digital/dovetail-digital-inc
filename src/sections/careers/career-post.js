@@ -7,7 +7,7 @@ import data from './career-post.data';
 
 export default function Postings() {
   return (
-    <section sx={{ variant: "section.feature" }}>
+    <section sx={{ variant: "section.feature" }} id="positions">
       <Container>
         <SectionHeader
           title="Open positions"
@@ -23,7 +23,7 @@ export default function Postings() {
           <TextFeature
             title={title}
             description={description}
-            btnName="Get in touch"
+            btnName="Apply here"
             btnURL={btnURL}
             points={points}
           />
