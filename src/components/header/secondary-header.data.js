@@ -1,7 +1,7 @@
 export default [
   {
     path: 'home',
-    label: 'About',
+    label: 'Culture',
   },
   {
     path: 'positions',

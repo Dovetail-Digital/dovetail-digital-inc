@@ -1,23 +1,21 @@
-import React, { useContext } from 'react';
-import { Box } from 'theme-ui';
-import { Scrollbars } from 'react-custom-scrollbars';
-import Drawer from 'components/drawer';
-import { DrawerContext } from '../../contexts/drawer/drawer.context';
-import { IoMdClose, IoMdMenu } from 'react-icons/io';
-import { Link } from 'react-scroll';
-import {
-  FaFacebookF,
-  FaLinkedinIn,
-} from 'react-icons/fa';
-import menuItems from './header.data';
+import React, { useContext } from "react";
+import { Box } from "theme-ui";
+import { Scrollbars } from "react-custom-scrollbars";
+import Drawer from "components/drawer";
+import { DrawerContext } from "../../contexts/drawer/drawer.context";
+import { IoMdClose, IoMdMenu } from "react-icons/io";
+import { Link } from "react-scroll";
+import { Link as URLLink } from "components/link";
+import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
+import menuItems from "./header.data";
 
 const social = [
   {
-    path: 'https://www.facebook.com/dovetaildigital',
+    path: "https://www.facebook.com/dovetaildigital",
     icon: <FaFacebookF />,
   },
   {
-    path: 'https://www.linkedin.com/company/dovetaildigital/',
+    path: "https://www.linkedin.com/company/dovetaildigital/",
     icon: <FaLinkedinIn />,
   },
 ];
@@ -28,7 +26,7 @@ const MobileDrawer = () => {
   // Toggle drawer
   const toggleHandler = React.useCallback(() => {
     dispatch({
-      type: 'TOGGLE',
+      type: "TOGGLE",
     });
   }, [dispatch]);
 
@@ -62,6 +60,7 @@ const MobileDrawer = () => {
                 {label}
               </Link>
             ))}
+            <URLLink path="/careers" label="Careers"></URLLink>
           </Box>
 
           <Box sx={styles.menuFooter}>
@@ -83,114 +82,115 @@ const MobileDrawer = () => {
 
 const styles = {
   handler: {
-    color: 'white',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    flexShrink: '0',
-    width: '40px',
-    cursor: 'pointer',
-    '@media screen and (min-width: 1024px)': {
-      display: 'none',
+    color: "white",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    flexShrink: "0",
+    width: "40px",
+    cursor: "pointer",
+    "@media screen and (min-width: 1024px)": {
+      display: "none",
     },
   },
 
   drawer: {
-    width: '100%',
-    height: '100%',
-    backgroundColor: 'dark',
+    width: "100%",
+    height: "100%",
+    backgroundColor: "dark",
   },
 
   close: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    position: 'absolute',
-    top: '25px',
-    right: '30px',
-    zIndex: '1',
-    cursor: 'pointer',
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    position: "absolute",
+    top: "25px",
+    right: "30px",
+    zIndex: "1",
+    cursor: "pointer",
   },
 
   content: {
-    width: '100%',
-    height: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-    pt: '100px',
-    pb: '40px',
-    px: '30px',
+    width: "100%",
+    height: "100%",
+    display: "flex",
+    flexDirection: "column",
+    pt: "100px",
+    pb: "40px",
+    px: "30px",
   },
 
   menu: {
-    width: '100%',
-    display: 'flex',
-    flexDirection: 'column',
+    width: "100%",
+    display: "flex",
+    flexDirection: "column",
     a: {
-      fontSize: '16px',
-      fontWeight: '500',
-      color: 'text_white',
-      py: '15px',
-      cursor: 'pointer',
-      borderBottom: '1px solid #e8e5e5',
-      transition: 'all 0.25s',
-      '&:hover': {
-        color: 'primary',
+      textDecoration: "none",
+      fontSize: "16px",
+      fontWeight: "500",
+      color: "text_secondary",
+      py: "15px",
+      cursor: "pointer",
+      borderBottom: "1px solid #e8e5e5",
+      transition: "all 0.25s",
+      "&:hover": {
+        color: "primary",
       },
-      '&.active': {
-        color: 'primary',
+      "&.active": {
+        color: "primary",
       },
     },
   },
 
   menuFooter: {
-    width: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    mt: 'auto',
+    width: "100%",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    mt: "auto",
   },
 
   social: {
-    width: '100%',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+    width: "100%",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
 
     icon: {
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      color: 'text',
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      color: "text",
       fontSize: 1,
       mr: 4,
-      transition: 'all 0.25s',
-      cursor: 'pointer',
+      transition: "all 0.25s",
+      cursor: "pointer",
       svg: {
-        fill: 'text',
-        transition: 'all 0.25s',
+        fill: "text",
+        transition: "all 0.25s",
       },
-      ':last-child': {
-        mr: '0',
+      ":last-child": {
+        mr: "0",
       },
-      '&:hover svg': {
-        fill: 'primary',
+      "&:hover svg": {
+        fill: "primary",
       },
     },
   },
 
   button: {
-    color: 'white',
-    fontSize: '14px',
-    fw: '700',
-    height: '45px',
-    borderRadius: '5px',
-    cursor: 'pointer',
-    width: '100%',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    py: '0',
+    color: "white",
+    fontSize: "14px",
+    fw: "700",
+    height: "45px",
+    borderRadius: "5px",
+    cursor: "pointer",
+    width: "100%",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    py: "0",
   },
 };
 

@@ -5,6 +5,7 @@ import Drawer from 'components/drawer';
 import { DrawerContext } from '../../contexts/drawer/drawer.context';
 import { IoMdClose, IoMdMenu } from 'react-icons/io';
 import { Link } from 'react-scroll';
+import { Link as URLLink } from "components/link";
 import {
   FaFacebookF,
   FaLinkedinIn,
@@ -49,6 +50,7 @@ const MobileDrawer = () => {
       <Scrollbars autoHide>
         <Box sx={styles.content}>
           <Box sx={styles.menu}>
+          <URLLink path="/" label="Home"></URLLink>
             {menuItems.map(({ path, label }, i) => (
               <Link
                 activeClass="active"
@@ -127,18 +129,19 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     a: {
-      fontSize: '16px',
-      fontWeight: '500',
-      color: 'text_white',
-      py: '15px',
-      cursor: 'pointer',
-      borderBottom: '1px solid #e8e5e5',
-      transition: 'all 0.25s',
-      '&:hover': {
-        color: 'primary',
+      textDecoration: "none",
+      fontSize: "16px",
+      fontWeight: "500",
+      color: "text_secondary",
+      py: "15px",
+      cursor: "pointer",
+      borderBottom: "1px solid #e8e5e5",
+      transition: "all 0.25s",
+      "&:hover": {
+        color: "primary",
       },
-      '&.active': {
-        color: 'primary',
+      "&.active": {
+        color: "primary",
       },
     },
   },

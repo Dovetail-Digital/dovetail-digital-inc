@@ -1,14 +1,14 @@
 /** @jsx jsx */
-import { jsx, Container, Flex, Button } from 'theme-ui';
-import { keyframes } from '@emotion/core';
-import { Link } from 'react-scroll';
-import Logo from 'components/logo';
-import { DrawerProvider } from 'contexts/drawer/drawer.provider';
-import MobileDrawer from './mobile-drawer';
-import menuItems from './header.data';
+import { jsx, Container, Flex, Button } from "theme-ui";
+import { keyframes } from "@emotion/core";
+import { Link } from "react-scroll";
+import { Link as URLLink} from 'components/link';
+import Logo from "components/logo";
+import { DrawerProvider } from "contexts/drawer/drawer.provider";
+import MobileDrawer from "./mobile-drawer";
+import menuItems from "./header.data";
 
-import LogoWhite from 'assets/brand/logo-white.svg';
-
+import LogoWhite from "assets/brand/logo-white.svg";
 
 export default function Header({ className }) {
   return (
@@ -31,6 +31,10 @@ export default function Header({ className }) {
                 {label}
               </Link>
             ))}
+            <URLLink
+              path="/careers"
+              label="Careers"
+            ></URLLink>
           </Flex>
 
           <MobileDrawer />
@@ -56,46 +60,47 @@ const positionAnim = keyframes`
 const styles = {
   header: {
     py: [4, null, 5],
-    width: '100%',
-    position: 'absolute',
+    width: "100%",
+    position: "absolute",
     top: 0,
     left: 0,
-    backgroundColor: 'background_brand',
-    transition: 'all 0.4s ease',
+    backgroundColor: "background_brand",
+    transition: "all 0.4s ease",
     animation: `${positionAnim} 0.4s ease`,
-    '&.sticky': {
-      position: 'fixed',
-      backgroundColor: 'background_brand',
-      color: 'heading',
-      boxShadow: '0 1px 2px rgba(0, 0, 0, 0.06)',
-      py: '20px',
-      'nev > a': {
-        color: 'heading',
+    "&.sticky": {
+      position: "fixed",
+      backgroundColor: "background_brand",
+      color: "heading",
+      boxShadow: "0 1px 2px rgba(0, 0, 0, 0.06)",
+      py: "20px",
+      "nev > a": {
+        color: "heading",
       },
     },
   },
   container: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-between',
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
   },
   nav: {
-    ml: 'auto',
+    ml: "auto",
     mr: 6,
-    display: 'none',
-    '@media screen and (min-width: 1024px)': {
-      display: 'block',
+    display: "none",
+    "@media screen and (min-width: 1024px)": {
+      display: "block",
     },
     a: {
-      fontSize: '16px',
-      fontWeight: 'heading',
+      textDecoration: "none",
+      fontSize: "16px",
+      fontWeight: "heading",
       px: 20,
-      cursor: 'pointer',
-      lineHeight: '1.2',
-      transition: 'all 0.15s',
-      color: 'heading',
-      '&.active': {
-        color: 'primary',
+      cursor: "pointer",
+      lineHeight: "1.2",
+      transition: "all 0.15s",
+      color: "heading",
+      "&.active": {
+        color: "primary",
       },
     },
   },

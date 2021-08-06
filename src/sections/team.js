@@ -13,7 +13,7 @@ const data = [
     imgSrc: Member,
     altText: 'Jesse Grunert',
     title: 'Jesse Grunert',
-    designation: 'CTO and Founder',
+    designation: '',
     socialProfile: [
       {
         id: 1,
@@ -34,7 +34,7 @@ const data = [
     imgSrc: Member,
     altText: 'Tyler Marshall',
     title: 'Tyler Marshall',
-    designation: 'COO and Founder',
+    designation: '',
     socialProfile: [
       {
         id: 1,
@@ -55,7 +55,7 @@ const data = [
     imgSrc: Member,
     altText: 'Will Zittlau',
     title: 'Will Zittlau',
-    designation: 'Developer',
+    designation: '',
     socialProfile: [
       {
         id: 1,
@@ -76,7 +76,7 @@ const data = [
     imgSrc: Member,
     altText: 'Ben Grunert',
     title: 'Ben Grunert',
-    designation: 'Shopify Expert',
+    designation: '',
     socialProfile: [
       {
         id: 1,
