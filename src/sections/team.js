@@ -96,7 +96,7 @@ const data = [
 
 export default function Team() {
   return (
-    <section sx={{ variant: 'section.team' }}>
+    <section sx={{ variant: 'section.team' }} id="team">
       <Container>
         <SectionHeader
           title="Meet our team"

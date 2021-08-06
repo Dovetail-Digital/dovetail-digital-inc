@@ -8,7 +8,7 @@ import TeamBuilding from 'assets/images/team-building.png';
 
 export default function CareerIntro() {
   return (
-    <section sx={{ variant: 'section.feature' }} id="intro">
+    <section sx={{ variant: 'section.feature' }} id="home">
       <Container sx = {styles.margin}>
         <SectionHeader
           title="Work with us"
