@@ -30,7 +30,6 @@ export default function IndexPage() {
         <Shopify />
         <CustomSoftware />
         <ClientFeedback />
-        <Team />
         <CallToAction />
       </Layout>
     </ThemeProvider>
