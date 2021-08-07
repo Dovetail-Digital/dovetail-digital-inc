@@ -5,6 +5,7 @@ import { IoIosArrowForward } from 'react-icons/io';
 
 export default function TextFeature({
   title,
+  positionType,
   description,
   points,
   btnName,
@@ -16,6 +17,9 @@ export default function TextFeature({
         <Heading as="h2" sx={styles.wrapper.title}>
           {title}
         </Heading>
+        <Text as="p" className="description" sx={styles.wrapper.positionType}>
+          Type: {positionType}
+        </Text>
         <Text as="p" className="description" sx={styles.wrapper.description}>
           {description}
         </Text>
@@ -67,6 +71,13 @@ const styles = {
       fontSize: [1, 2, null, null, '17px'],
       color: 'text_secondary',
       fontWeight: 'body',
+      lineHeight: [1.9, 2, null, null, 2.2],
+      px: [0, null, 7, 0],
+    },
+    positionType: {
+      fontSize: [1, 2, null, null, '17px'],
+      color: 'text_secondary',
+      fontWeight: 'bold',
       lineHeight: [1.9, 2, null, null, 2.2],
       px: [0, null, 7, 0],
     },

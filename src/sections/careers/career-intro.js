@@ -12,13 +12,13 @@ export default function CareerIntro() {
       <Container sx = {styles.margin}>
         <SectionHeader
           title="Work with us"
-          description="As a small agency we have a tightknit, fun and flexible work environment. We take our work seriously, but always maintain a positive, collaborative, and uplifting space. We are happy to accomodate your lifestyle once you're onbooard! Always remote first, but you can come say hi at our Okanagan office. "
+          description="As a small agency we have a tight-knit, fun and flexible work environment. We take our work seriously, but always maintain a positive, collaborative, and uplifting space. We are happy to accommodate your lifestyle once you're onboard! We operate as a remote first company, however you may always swing by our office in the Okanagan Valley."
         />
 
         <Box sx={styles.thumbWrapper}>
           <Image
             src={TeamBuilding}
-            alt="satisfaction garunteed"
+            alt="satisfaction guaranteed"
             width="891"
             height="297"
           />

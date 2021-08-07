@@ -14,7 +14,7 @@ export default function Postings() {
           description="All currently available job postings are included below. Don't see your fit? You can still submit a general application at the bottom of the page."
         />
       </Container>
-      {data.postings.map(({ title, image, description, btnURL, points }, i) => (
+      {data.postings.map(({ title, image, description, btnURL, points , positionType}, i) => (
       <Container sx={styles.containerBox}>
         <Box sx={styles.thumbnail}>
           <Image src={image} alt="Thumbnail" width="632" height="750" />
@@ -22,6 +22,7 @@ export default function Postings() {
         <Box sx={styles.contentBox}>
           <TextFeature
             title={title}
+            positionType={positionType}
             description={description}
             btnName="Apply here"
             btnURL={btnURL}
