@@ -3,7 +3,7 @@ import { jsx } from 'theme-ui';
 import { Container, Grid } from 'theme-ui';
 import SectionHeader from 'components/section-header';
 import TeamCard from 'components/team-card';
-import { FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import {FaLinkedinIn } from 'react-icons/fa';
 
 import Jesse from 'assets/team/jesse.jpg';
 import Will from 'assets/team/will.jpg';
@@ -22,14 +22,8 @@ const data = [
       {
         id: 1,
         name: 'linkedIn',
-        path: '#',
+        path: 'https://www.linkedin.com/in/jesse-grunert-b549b1b1/',
         icon: <FaLinkedinIn />,
-      },
-      {
-        id: 3,
-        name: 'instagram',
-        path: '#',
-        icon: <FaInstagram />,
       },
     ],
   },
@@ -43,14 +37,8 @@ const data = [
       {
         id: 1,
         name: 'linkedIn',
-        path: '#',
+        path: 'https://www.linkedin.com/in/tylercmarshall/',
         icon: <FaLinkedinIn />,
-      },
-      {
-        id: 3,
-        name: 'instagram',
-        path: '#',
-        icon: <FaInstagram />,
       },
     ],
   },
@@ -64,14 +52,8 @@ const data = [
       {
         id: 1,
         name: 'linkedIn',
-        path: '#',
+        path: 'https://www.linkedin.com/in/will-zittlau/',
         icon: <FaLinkedinIn />,
-      },
-      {
-        id: 3,
-        name: 'instagram',
-        path: '#',
-        icon: <FaInstagram />,
       },
     ],
   },
@@ -85,14 +67,8 @@ const data = [
       {
         id: 1,
         name: 'linkedIn',
-        path: '#',
+        path: 'https://www.linkedin.com/in/benjamin-grunert-879b94140/',
         icon: <FaLinkedinIn />,
-      },
-      {
-        id: 3,
-        name: 'instagram',
-        path: '#',
-        icon: <FaInstagram />,
       },
     ],
   },
