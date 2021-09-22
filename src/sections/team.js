@@ -3,14 +3,18 @@ import { jsx } from 'theme-ui';
 import { Container, Grid } from 'theme-ui';
 import SectionHeader from 'components/section-header';
 import TeamCard from 'components/team-card';
-import { FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import {FaLinkedinIn } from 'react-icons/fa';
 
-import Member from 'assets/team/member.png';
+import Jesse from 'assets/team/jesse.jpg';
+import Will from 'assets/team/will.jpg';
+import Tyler from 'assets/team/tyler.jpg';
+import Ben from 'assets/team/ben.jpg';
+
 
 const data = [
   {
     id: 1,
-    imgSrc: Member,
+    imgSrc: Jesse,
     altText: 'Jesse Grunert',
     title: 'Jesse Grunert',
     designation: '',
@@ -18,20 +22,14 @@ const data = [
       {
         id: 1,
         name: 'linkedIn',
-        path: '#',
+        path: 'https://www.linkedin.com/in/jesse-grunert-b549b1b1/',
         icon: <FaLinkedinIn />,
-      },
-      {
-        id: 3,
-        name: 'instagram',
-        path: '#',
-        icon: <FaInstagram />,
       },
     ],
   },
   {
     id: 2,
-    imgSrc: Member,
+    imgSrc: Tyler,
     altText: 'Tyler Marshall',
     title: 'Tyler Marshall',
     designation: '',
@@ -39,20 +37,14 @@ const data = [
       {
         id: 1,
         name: 'linkedIn',
-        path: '#',
+        path: 'https://www.linkedin.com/in/tylercmarshall/',
         icon: <FaLinkedinIn />,
-      },
-      {
-        id: 3,
-        name: 'instagram',
-        path: '#',
-        icon: <FaInstagram />,
       },
     ],
   },
   {
     id: 3,
-    imgSrc: Member,
+    imgSrc: Will,
     altText: 'Will Zittlau',
     title: 'Will Zittlau',
     designation: '',
@@ -60,20 +52,14 @@ const data = [
       {
         id: 1,
         name: 'linkedIn',
-        path: '#',
+        path: 'https://www.linkedin.com/in/will-zittlau/',
         icon: <FaLinkedinIn />,
-      },
-      {
-        id: 3,
-        name: 'instagram',
-        path: '#',
-        icon: <FaInstagram />,
       },
     ],
   },
   {
     id: 3,
-    imgSrc: Member,
+    imgSrc: Ben,
     altText: 'Ben Grunert',
     title: 'Ben Grunert',
     designation: '',
@@ -81,14 +67,8 @@ const data = [
       {
         id: 1,
         name: 'linkedIn',
-        path: '#',
+        path: 'https://www.linkedin.com/in/benjamin-grunert-879b94140/',
         icon: <FaLinkedinIn />,
-      },
-      {
-        id: 3,
-        name: 'instagram',
-        path: '#',
-        icon: <FaInstagram />,
       },
     ],
   },
