@@ -41,7 +41,7 @@ const styles = {
     alignItems: "center",
     justifyContent: ["flex-Start", null, null, "space-between"],
     flexWrap: ["wrap", null, null, "nowrap"],
-    pb: [0, null, null, null, null, null, null, 8],
+    mb: [64],
   },
   thumbnail: {
     pr: [2, null, 7, 4, 7, 8, null, 10],
