@@ -6,21 +6,27 @@ import {
   ThemeProvider,
   createTheme,
 } from "@mui/material";
-
+declare module "@mui/material/styles" {
+  interface Theme {
+    status: {
+      danger: string;
+    };
+  }
+  // allow configuration using `createTheme`
+  interface ThemeOptions {
+    status?: {
+      danger?: string;
+    };
+  }
+}
 export default function ThemeWrapper({ children }: { children: any }) {
-  const rootElement = document.getElementById("root");
-
   const theme = createTheme({
-    components: {
-      MuiPopover: {
-        defaultProps: {
-          container: rootElement,
-        },
+    palette: {
+      primary: {
+        main: "#089B74",
       },
-      MuiPopper: {
-        defaultProps: {
-          container: rootElement,
-        },
+      secondary: {
+        main: "#000",
       },
     },
   });

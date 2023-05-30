@@ -58,7 +58,8 @@ export default function MainHero() {
           <div className="mt-10 flex items-center gap-x-6">
             <Button
               variant="contained"
-              className="bg-dovetail-green hover:bg-white hover:text-black"
+              color="primary"
+              className="hover:bg-white hover:text-black"
             >
               Our services
             </Button>
