@@ -1,12 +1,12 @@
 "use client";
 
-import { Button } from "@mui/material";
+import { Button, Container } from "@mui/material";
 
 export default function MainHero() {
   return (
-    <div className="relative isolate overflow-hidden bg-gray-900">
+    <div className="relative isolate overflow-hidden bg-[#02150F] bg-[url('/background.svg')] bg-contain bg-no-repeat bg-blend-soft-light">
       <svg
-        className="absolute inset-0 -z-10 h-full w-full stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
+        className="inset-0 -z-10 h-full w-full stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
         aria-hidden="true"
       >
         <defs>
@@ -46,8 +46,8 @@ export default function MainHero() {
           }}
         />
       </div>
-      <div className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-40">
-        <div className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-32">
+      <Container className="lg:flex pb-24 sm:pb-32">
+        <div className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8">
           <h1 className="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">
             Purpose driven development
           </h1>
@@ -72,7 +72,7 @@ export default function MainHero() {
           </div>
         </div>
         <div className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
-          <div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
+          <div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none max-h-[35rem] overflow-hidden rounded-md">
             <img
               src="/hp-pic.png"
               alt="App screenshot"
@@ -80,7 +80,7 @@ export default function MainHero() {
             />
           </div>
         </div>
-      </div>
+      </Container>
     </div>
   );
 }
