@@ -4,7 +4,7 @@ import { Button, Container } from "@mui/material";
 
 export default function MainHero() {
   return (
-    <div className="relative isolate overflow-hidden bg-[#02150F] bg-[url('/background.svg')] bg-contain bg-no-repeat bg-blend-soft-light">
+    <div className="relative isolate overflow-hidden bg-[#02150F] bg-[url('/background.svg')] bg-cover bg-no-repeat bg-blend-difference">
       <svg
         className="inset-0 -z-10 h-full w-full stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
         aria-hidden="true"
