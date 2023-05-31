@@ -29,6 +29,12 @@ export default function ThemeWrapper({ children }: { children: any }) {
         main: "#000",
       },
     },
+    typography: {
+      h5: {
+        fontSize: "24pt",
+        fontWeight: "bold",
+      },
+    },
   });
   return (
     <StyledEngineProvider injectFirst>

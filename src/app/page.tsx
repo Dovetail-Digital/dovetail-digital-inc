@@ -1,14 +1,14 @@
 "use client";
 
-import { Box } from "@mui/material";
+import { Stack } from "@mui/material";
 import MainHero from "./components/MainHero";
-import Services from "./components/Services";
+import LogoBanner from "./components/LogoBanner";
 
 export default function Home() {
   return (
-    <Box>
+    <Stack sx={{ backgroundColor: "#FAFAFA" }} spacing={8} useFlexGap>
       <MainHero />
-      <Services />
-    </Box>
+      <LogoBanner titleText="Technologies we use" />
+    </Stack>
   );
 }
