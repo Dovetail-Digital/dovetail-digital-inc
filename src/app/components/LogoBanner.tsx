@@ -67,7 +67,13 @@ export default function LogoBanner({ titleText }: { titleText: string }) {
       >
         {logos.map((logo) => {
           return (
-            <Image src={logo.src} alt={logo.alt} width={160} height={60} />
+            <Image
+              key={logo.title}
+              src={logo.src}
+              alt={logo.alt}
+              width={160}
+              height={60}
+            />
           );
         })}
       </Stack>

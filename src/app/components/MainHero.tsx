@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, Container } from "@mui/material";
+import { Button, Container, Typography } from "@mui/material";
 
 export default function MainHero() {
   return (
@@ -48,9 +48,9 @@ export default function MainHero() {
       </div>
       <Container className="lg:flex pb-24 sm:pb-32">
         <div className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8">
-          <h1 className="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">
+          <Typography variant="h3" color="white">
             Purpose driven development
-          </h1>
+          </Typography>
           <p className="mt-6 text-lg leading-8 text-gray-300">
             We craft extraordinary online experiences for both high-end
             clientele and small budgets alike.
@@ -71,7 +71,7 @@ export default function MainHero() {
             </Button>
           </div>
         </div>
-        <div className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
+        <div className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-8">
           <div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none max-h-[35rem] overflow-hidden rounded-md">
             <img
               src="/hp-pic.png"

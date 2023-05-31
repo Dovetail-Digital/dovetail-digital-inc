@@ -20,6 +20,7 @@ declare module "@mui/material/styles" {
   }
 }
 export default function ThemeWrapper({ children }: { children: any }) {
+  const font = "'Montserrat', sans-serif";
   const theme = createTheme({
     palette: {
       primary: {
@@ -30,6 +31,13 @@ export default function ThemeWrapper({ children }: { children: any }) {
       },
     },
     typography: {
+      fontFamily: font,
+      h3: {
+        fontFamily: font,
+        fontWeight: "bold",
+        fontSize: "48pt",
+        lineHeight: "116%",
+      },
       h5: {
         fontSize: "24pt",
         fontWeight: "bold",
