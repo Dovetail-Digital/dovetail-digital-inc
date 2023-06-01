@@ -1,22 +1,16 @@
+# Dovetail Digital Corp Site
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
 First, run the development server:
 
-```bash
-npm run dev
-# or
+```
 yarn dev
-# or
-pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-[http://localhost:3000/api/hello](http://localhost:3000/api/hello) is an endpoint that uses [Route Handlers](https://beta.nextjs.org/docs/routing/route-handlers). This endpoint can be edited in `app/api/hello/route.ts`.
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
@@ -31,6 +25,12 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Our website will be deployed on Vercel. At time of writing, it is currently all being done locally.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Strapi Headless CMS
+
+This project uses a content management system (CMS) called Strapi. Strapi is a headless system, meaning it provides content to us over API calls. This allows us to decoouple the front-end completely from the back-end.
+
+To run your site locally, you must also have the Strapi CMS service running locally. The repo for the service is located [here](https://gitlab.com/dovetail-digital/dovetail-digital-site-strapi).
+
+The strapi instance will have all the content types created, as that is stored in code. It will not have instances of that content, however.

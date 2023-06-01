@@ -1,14 +1,31 @@
-"use client";
-
-import { Stack } from "@mui/material";
 import MainHero from "./components/MainHero";
 import LogoBanner from "./components/LogoBanner";
+import PageWrapper from "./components/PageWrapper";
 
-export default function Home() {
+function fetchWithDelay(url: string, delay = 5000) {
+  return new Promise((resolve, reject) => {
+    fetch(url)
+      .then((response) => {
+        setTimeout(() => resolve(response.json()), delay);
+      })
+      .catch((error) => reject(error));
+  });
+}
+
+export default async function Home() {
+  try {
+    const response = await fetchWithDelay(
+      "http://127.0.0.1:1337/api/landing-pages/1?populate[pageComponents][populate]=*"
+    );
+    const homePage = await response;
+  } catch (err) {
+    console.log("R", err);
+  }
+
   return (
-    <Stack sx={{ backgroundColor: "#FAFAFA" }} spacing={4} useFlexGap mb={4}>
+    <PageWrapper>
       <MainHero />
       <LogoBanner titleText="Technologies we use" />
-    </Stack>
+    </PageWrapper>
   );
 }
