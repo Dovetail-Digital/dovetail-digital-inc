@@ -1,4 +1,3 @@
-import LogoBanner from "./components/LogoBanner";
 import PageWrapper from "./components/PageWrapper";
 import ComponentMapper from "./ComponentMapper";
 import { Key } from "react";
@@ -22,7 +21,6 @@ export default async function Home() {
           <ComponentMapper key={index} sectionData={sectionData} />
         )
       )}
-      <LogoBanner titleText="Technologies we use" />
     </PageWrapper>
   );
 }

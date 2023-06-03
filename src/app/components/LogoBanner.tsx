@@ -2,27 +2,27 @@
 import { Container, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 
-export default function LogoBanner({ titleText }: { titleText: string }) {
-  const logos: { title: string; src: string; alt: string }[] = [
-    { title: "Git", src: "/git-logo.svg", alt: "Git" },
-    { title: "NextJS", src: "/nextjs-logo.svg", alt: "NextJS" },
-    {
-      title: "ElasticSearch",
-      src: "/elasticsearch-logo.svg",
-      alt: "ElasticSearch",
-    },
-    { title: "MaterialUI", src: "/mui-logo.svg", alt: "MaterialUI" },
-    {
-      title: "ContentStack",
-      src: "/contentstack-logo.svg",
-      alt: "ContentStack",
-    },
-    { title: "AWS", src: "/aws-logo.svg", alt: "Amazon Web Services" },
-  ];
+export default function LogoBanner({ title, logo }) {
+  //  const logos: { title: string; src: string; alt: string }[] = [
+  //    { title: "Git", src: "/git-logo.svg", alt: "Git" },
+  //    { title: "NextJS", src: "/nextjs-logo.svg", alt: "NextJS" },
+  //    {
+  //      title: "ElasticSearch",
+  //      src: "/elasticsearch-logo.svg",
+  //      alt: "ElasticSearch",
+  //    },
+  //    { title: "MaterialUI", src: "/mui-logo.svg", alt: "MaterialUI" },
+  //    {
+  //      title: "ContentStack",
+  //      src: "/contentstack-logo.svg",
+  //      alt: "ContentStack",
+  //    },
+  //    { title: "AWS", src: "/aws-logo.svg", alt: "Amazon Web Services" },
+  //  ];
   return (
     <Container>
       <Typography className="sm:hidden" variant="h5" textAlign="center">
-        {titleText}
+        {title}
       </Typography>
       <Typography
         textAlign="center"
@@ -55,7 +55,7 @@ export default function LogoBanner({ titleText }: { titleText: string }) {
           },
         }}
       >
-        {titleText}
+        {title}
       </Typography>
       <Stack
         direction="row"
@@ -65,7 +65,7 @@ export default function LogoBanner({ titleText }: { titleText: string }) {
         flexWrap={"wrap"}
         justifyContent="center"
       >
-        {logos.map((logo) => {
+        {logo.map((logo) => {
           return (
             <Image
               key={logo.title}

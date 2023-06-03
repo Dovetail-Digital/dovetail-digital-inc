@@ -5,9 +5,13 @@ import { Button, Container, Typography } from "@mui/material";
 export default function MainHero({
   title,
   introText,
+  heroImage,
+  cta,
 }: {
   title: String;
   introText: String;
+  heroImage: any;
+  cta: any;
 }) {
   return (
     <div className="relative isolate overflow-hidden bg-[#02150F] bg-[url('/background.svg')] bg-cover bg-no-repeat bg-blend-soft-light">
@@ -57,31 +61,30 @@ export default function MainHero({
           <Typography variant="h3" color="white">
             {title}
           </Typography>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
-            We craft extraordinary online experiences for both high-end
-            clientele and small budgets alike.
-          </p>
+          <p className="mt-6 text-lg leading-8 text-gray-300">{introText}</p>
           <div className="mt-10 flex items-center gap-x-6">
             <Button
               variant="contained"
               color="primary"
               className="hover:bg-white hover:text-black"
+              href={cta[0].url}
             >
-              Our services
+              {cta[0].text}
             </Button>
             <Button
               variant="outlined"
               className="text-white border-white hover:border-dovetail-green hover:text-dovetail-green hover:opacity-90"
+              href={cta[1].url}
             >
-              Case studies
+              {cta[1].text}
             </Button>
           </div>
         </div>
         <div className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-8">
           <div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none max-h-[35rem] overflow-hidden rounded-md">
             <img
-              src="/hp-pic.png"
-              alt="App screenshot"
+              src={process.env.STRAPI_SERVER + heroImage.data.attributes.url}
+              alt={heroImage.data.attributes.alternativeText}
               className="w-[76rem] rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10"
             />
           </div>
