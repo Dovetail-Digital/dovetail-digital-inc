@@ -14,7 +14,8 @@ export default async function RootLayout({
 }) {
   let menuLinks: { title: string; url: string }[] = [];
   try {
-    const menu = await fetch("http://127.0.0.1:1337/api/menus/2?populate=*");
+    const strapiServer = String(process.env.STRAPI_SERVER);
+    const menu = await fetch(`${strapiServer}/api/menus/2?populate=*`);
     const body = await menu.json();
     const menuLinksObject = body.data.attributes.menu_links;
     if (menuLinksObject.length <= 0) {

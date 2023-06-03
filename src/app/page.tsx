@@ -1,30 +1,27 @@
-import MainHero from "./components/MainHero";
 import LogoBanner from "./components/LogoBanner";
 import PageWrapper from "./components/PageWrapper";
-
-function fetchWithDelay(url: string, delay = 5000) {
-  return new Promise((resolve, reject) => {
-    fetch(url)
-      .then((response) => {
-        setTimeout(() => resolve(response.json()), delay);
-      })
-      .catch((error) => reject(error));
-  });
-}
+import ComponentMapper from "./ComponentMapper";
+import { Key } from "react";
 
 export default async function Home() {
+  let homePageData;
   try {
-    const response = await fetchWithDelay(
-      "http://127.0.0.1:1337/api/landing-pages/1?populate[pageComponents][populate]=*"
+    // The homepage is always going to be / so we can hardcode the following pattern
+    const response = await fetch(
+      "http://127.0.0.1:1337/api/landing-pages?filters[url][$eq]=/&populate[pageComponents][populate]=*"
     );
-    const homePage = await response;
+    homePageData = await response.json();
   } catch (err) {
     console.log("R", err);
   }
 
   return (
     <PageWrapper>
-      <MainHero />
+      {homePageData.data[0].attributes.pageComponents.map(
+        (sectionData: any, index: Key) => (
+          <ComponentMapper key={index} sectionData={sectionData} />
+        )
+      )}
       <LogoBanner titleText="Technologies we use" />
     </PageWrapper>
   );
