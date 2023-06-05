@@ -66,10 +66,13 @@ export default function LogoBanner({ title, logo }) {
         justifyContent="center"
       >
         {logo.map((logo) => {
+          console.log("Slo", logo);
           return (
             <Image
               key={logo.title}
-              src={logo.src}
+              src={
+                process.env.STRAPI_SERVER + logo.image.data[0].attributes.url
+              }
               alt={logo.alt}
               width={160}
               height={60}

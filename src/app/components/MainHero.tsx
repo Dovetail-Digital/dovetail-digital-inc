@@ -13,6 +13,7 @@ export default function MainHero({
   heroImage: any;
   cta: any;
 }) {
+  console.log("S", heroImage);
   return (
     <div className="relative isolate overflow-hidden bg-[#02150F] bg-[url('/background.svg')] bg-cover bg-no-repeat bg-blend-soft-light">
       <svg

@@ -1,8 +1,8 @@
 export default async function Page() {
   try {
-    // The homepage is always going to be / so we can hardcode the following pattern
+    // @todo remove the filter to be based on the slug
     const response = await fetch(
-      "http://127.0.0.1:1337/api/landing-pages?filters[url][$eq]=/&populate[pageComponents][populate]=*"
+      "http://127.0.0.1:1337/api/landing-pages?filters[url][$eq]=/&populate[pageComponents][on][banners.logo-banner][populate]=logo.image&populate[pageComponents][on][banners.hero-banner][populate]=*"
     );
     const homePage = await response.json();
   } catch (err) {
