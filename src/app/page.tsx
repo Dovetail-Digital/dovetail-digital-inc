@@ -7,7 +7,7 @@ export default async function Home() {
   try {
     // The homepage is always going to be / so we can hardcode the following pattern
     const response = await fetch(
-      "http://127.0.0.1:1337/api/landing-pages?filters[url][$eq]=/&populate[pageComponents][on][banners.logo-banner][populate]=logo.image&populate[pageComponents][on][banners.hero-banner][populate]=*"
+      `${process.env.STRAPI_SERVER}/api/landing-pages?filters[url][$eq]=/&populate[pageComponents][on][banners.logo-banner][populate]=logo.image&populate[pageComponents][on][banners.hero-banner][populate]=*&populate[pageComponents][on][banners.testimonials-banner][populate]=testimonials.profilePicture`
     );
     homePageData = await response.json();
   } catch (err) {
@@ -17,9 +17,9 @@ export default async function Home() {
   return (
     <PageWrapper>
       {homePageData.data[0].attributes.pageComponents.map(
-        (sectionData: any, index: Key) => (
-          <ComponentMapper key={index} sectionData={sectionData} />
-        )
+        (sectionData: any, index: Key) => {
+          return <ComponentMapper key={index} sectionData={sectionData} />;
+        }
       )}
     </PageWrapper>
   );

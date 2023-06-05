@@ -32,6 +32,9 @@ export default function ThemeWrapper({ children }: { children: any }) {
     },
     typography: {
       fontFamily: font,
+      h2: {
+        fontFamily: font,
+      },
       h3: {
         fontFamily: font,
         fontWeight: "bold",
