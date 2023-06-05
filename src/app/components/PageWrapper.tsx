@@ -7,7 +7,7 @@ export default function PageWrapper({
   children: React.ReactNode;
 }) {
   return (
-    <Stack sx={{ backgroundColor: "#FAFAFA" }} spacing={4} useFlexGap mb={4}>
+    <Stack sx={{ backgroundColor: "#FAFAFA" }} spacing={16} useFlexGap mb={4}>
       {children}
     </Stack>
   );

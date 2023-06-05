@@ -2,7 +2,13 @@
 import { Container, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 
-export default function LogoBanner({ title, logo }) {
+export default function LogoBanner({
+  title,
+  logo,
+}: {
+  title: String;
+  logo: any;
+}) {
   //  const logos: { title: string; src: string; alt: string }[] = [
   //    { title: "Git", src: "/git-logo.svg", alt: "Git" },
   //    { title: "NextJS", src: "/nextjs-logo.svg", alt: "NextJS" },
@@ -20,7 +26,7 @@ export default function LogoBanner({ title, logo }) {
   //    { title: "AWS", src: "/aws-logo.svg", alt: "Amazon Web Services" },
   //  ];
   return (
-    <Container>
+    <div className="py-16">
       <Typography className="sm:hidden" variant="h5" textAlign="center">
         {title}
       </Typography>
@@ -66,13 +72,10 @@ export default function LogoBanner({ title, logo }) {
         justifyContent="center"
       >
         {logo.map((logo) => {
-          console.log("Slo", logo);
           return (
             <Image
               key={logo.title}
-              src={
-                process.env.STRAPI_SERVER + logo.image.data[0].attributes.url
-              }
+              src={"http://127.0.0.1:1337" + logo.image.data[0].attributes.url}
               alt={logo.alt}
               width={160}
               height={60}
@@ -80,6 +83,6 @@ export default function LogoBanner({ title, logo }) {
           );
         })}
       </Stack>
-    </Container>
+    </div>
   );
 }

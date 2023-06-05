@@ -1,4 +1,3 @@
-import PageWrapper from "./components/PageWrapper";
 import ComponentMapper from "./ComponentMapper";
 import { Key } from "react";
 
@@ -14,13 +13,13 @@ export default async function Home() {
     console.log("R", err);
   }
 
-  return (
-    <PageWrapper>
-      {homePageData.data[0].attributes.pageComponents.map(
-        (sectionData: any, index: Key) => {
-          return <ComponentMapper key={index} sectionData={sectionData} />;
-        }
-      )}
-    </PageWrapper>
+  return homePageData.data[0].attributes.pageComponents.map(
+    (sectionData: any, index: Key) => {
+      return (
+        <div className="odd:bg-gray-50">
+          <ComponentMapper key={index} sectionData={sectionData} />
+        </div>
+      );
+    }
   );
 }
