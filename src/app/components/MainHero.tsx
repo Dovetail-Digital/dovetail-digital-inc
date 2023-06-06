@@ -90,8 +90,8 @@ export default function MainHero({
               }
               alt={heroImage.data.attributes.alternativeText}
               className="w-[76rem] rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10 object-cover object-left"
-              width={"1610"}
-              height={"1211"}
+              width={"1141"}
+              height={"707"}
               priority={true}
               placeholder="blur"
               blurDataURL="/hp-pic.png"
