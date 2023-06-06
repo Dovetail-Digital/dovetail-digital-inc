@@ -84,7 +84,7 @@ export default function MainHero({
           <div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none max-h-[35rem] overflow-hidden rounded-md">
             <img
               src={
-                "https://dovetail-strapi-backend.herokuapp.com/" +
+                "https://dovetail-strapi-backend.herokuapp.com" +
                 heroImage.data.attributes.url
               }
               alt={heroImage.data.attributes.alternativeText}
