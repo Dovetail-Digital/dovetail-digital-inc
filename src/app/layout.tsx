@@ -1,5 +1,5 @@
 import Navigation from "./Navigation";
-import ThemeWrapper from "./ThemeWrapper";
+import ProviderWrapper from "./ProviderWrapper";
 import "./globals.css";
 
 export const metadata = {
@@ -32,12 +32,12 @@ export default async function RootLayout({
   }
   return (
     <html lang="en">
-      <ThemeWrapper>
+      <ProviderWrapper>
         <body>
           <Navigation menuLinks={menuLinks} />
           {children}
         </body>
-      </ThemeWrapper>
+      </ProviderWrapper>
     </html>
   );
 }

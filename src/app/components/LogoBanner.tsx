@@ -1,5 +1,5 @@
 "use client";
-import { Container, Stack, Typography } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 import Image from "next/image";
 
 export default function LogoBanner({
@@ -9,22 +9,6 @@ export default function LogoBanner({
   title: String;
   logo: any;
 }) {
-  //  const logos: { title: string; src: string; alt: string }[] = [
-  //    { title: "Git", src: "/git-logo.svg", alt: "Git" },
-  //    { title: "NextJS", src: "/nextjs-logo.svg", alt: "NextJS" },
-  //    {
-  //      title: "ElasticSearch",
-  //      src: "/elasticsearch-logo.svg",
-  //      alt: "ElasticSearch",
-  //    },
-  //    { title: "MaterialUI", src: "/mui-logo.svg", alt: "MaterialUI" },
-  //    {
-  //      title: "ContentStack",
-  //      src: "/contentstack-logo.svg",
-  //      alt: "ContentStack",
-  //    },
-  //    { title: "AWS", src: "/aws-logo.svg", alt: "Amazon Web Services" },
-  //  ];
   return (
     <div className="py-16">
       <Typography className="sm:hidden" variant="h5" textAlign="center">

@@ -1,7 +1,10 @@
 import ComponentMapper from "./ComponentMapper";
 import { Key } from "react";
+import ContactUs from "./components/ContactUs";
 
 export default async function Home() {
+  // @todo we may not want to do this, because the URL will always be public..
+  const formSparkUrl = String(process.env.FORMSPARK_URL);
   let homePageData;
   try {
     // The homepage is always going to be / so we can hardcode the following pattern
@@ -13,13 +16,20 @@ export default async function Home() {
     console.log("R", err);
   }
 
-  return homePageData.data[0].attributes.pageComponents.map(
-    (sectionData: any, index: Key) => {
-      return (
-        <div className="odd:bg-gray-50">
-          <ComponentMapper key={index} sectionData={sectionData} />
-        </div>
-      );
-    }
+  return (
+    <>
+      {homePageData.data[0].attributes.pageComponents.map(
+        (sectionData: any, index: Key) => {
+          return (
+            <div className="odd:bg-gray-50">
+              <ComponentMapper key={index} sectionData={sectionData} />
+            </div>
+          );
+        }
+      )}
+      <div className="bg-gray-50">
+        <ContactUs formSparkUrl={formSparkUrl} />
+      </div>
+    </>
   );
 }
