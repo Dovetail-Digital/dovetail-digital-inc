@@ -89,7 +89,7 @@ export default function MainHero({
                 heroImage.data.attributes.url
               }
               alt={heroImage.data.attributes.alternativeText}
-              className="w-[76rem] rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10"
+              className="w-[76rem] rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10 object-cover object-left"
               width={"1610"}
               height={"1211"}
             />
