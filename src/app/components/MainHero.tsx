@@ -57,7 +57,7 @@ export default function MainHero({
           }}
         />
       </div>
-      <Container className="flex pb-24 sm:pb-32">
+      <Container className="relative pb-24 sm:pb-80">
         <div className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8">
           <Typography variant="h3" color="white">
             {title}
@@ -81,22 +81,20 @@ export default function MainHero({
             </Button>
           </div>
         </div>
-        <div className="max-lg:mt-16 md:ml-16">
-          <div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none max-h-[35rem] overflow-hidden rounded-md">
-            <Image
-              src={
-                "https://dovetail-strapi-backend.herokuapp.com" +
-                heroImage.data.attributes.url
-              }
-              alt={heroImage.data.attributes.alternativeText}
-              className="w-[76rem] rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10 object-left object-contain"
-              width={"1141"}
-              height={"707"}
-              priority={true}
-              placeholder="blur"
-              blurDataURL="/hp-pic.png"
-            />
-          </div>
+        <div className="absolute top-0 left-[60%] right-0 bottom-0 w-full max-h-[35rem] overflow-hidden rounded-md">
+          <Image
+            src={
+              "https://dovetail-strapi-backend.herokuapp.com" +
+              heroImage.data.attributes.url
+            }
+            alt={heroImage.data.attributes.alternativeText}
+            className="hidden lg:block w-[76rem] rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10 object-left object-cover"
+            width={"1141"}
+            height={"707"}
+            priority={true}
+            placeholder="blur"
+            blurDataURL="/hp-pic.png"
+          />
         </div>
       </Container>
     </div>
