@@ -92,6 +92,7 @@ export default function MainHero({
               className="w-[76rem] rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10 object-cover object-left"
               width={"1610"}
               height={"1211"}
+              priority={true}
             />
           </div>
         </div>
