@@ -88,7 +88,7 @@ export default function MainHero({
               heroImage.data.attributes.url
             }
             alt={heroImage.data.attributes.alternativeText}
-            className="hidden lg:block w-[76rem] rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10 object-left object-cover"
+            className="hidden lg:block w-[76rem] rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10 object-left object-contain"
             width={"1141"}
             height={"707"}
             priority={true}
