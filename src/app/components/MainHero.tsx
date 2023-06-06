@@ -57,7 +57,7 @@ export default function MainHero({
           }}
         />
       </div>
-      <Container className="lg:flex pb-24 sm:pb-32">
+      <Container className="flex pb-24 sm:pb-32">
         <div className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8">
           <Typography variant="h3" color="white">
             {title}
@@ -89,7 +89,7 @@ export default function MainHero({
                 heroImage.data.attributes.url
               }
               alt={heroImage.data.attributes.alternativeText}
-              className="w-[76rem] rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10 object-left"
+              className="w-[76rem] rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10 object-left object-contain"
               width={"1141"}
               height={"707"}
               priority={true}
