@@ -93,6 +93,7 @@ export default function MainHero({
               width={"1610"}
               height={"1211"}
               priority={true}
+              placeholder="blur"
             />
           </div>
         </div>
