@@ -55,17 +55,25 @@ export default function LogoBanner({
         flexWrap={"wrap"}
         justifyContent="center"
       >
-        {logo.map((logo) => {
-          return (
-            <Image
-              key={logo.title}
-              src={"http://127.0.0.1:1337" + logo.image.data[0].attributes.url}
-              alt={logo.alt}
-              width={160}
-              height={60}
-            />
-          );
-        })}
+        {logo.map(
+          (logo: {
+            title: string;
+            alt: string;
+            image: { data: [{ attributes: { url: string } }] };
+          }) => {
+            return (
+              <Image
+                key={logo.title}
+                src={
+                  "http://127.0.0.1:1337" + logo.image.data[0].attributes.url
+                }
+                alt={logo.alt}
+                width={160}
+                height={60}
+              />
+            );
+          }
+        )}
       </Stack>
     </div>
   );
