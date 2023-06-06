@@ -33,7 +33,7 @@ export default function Testimonials({
                       <img
                         className="h-10 w-10 rounded-full bg-gray-50"
                         src={
-                          "http://127.0.0.1:1337" +
+                          "https://dovetail-strapi-backend.herokuapp.com" +
                           testimonial.profilePicture.data.attributes.url
                         }
                         alt=""
