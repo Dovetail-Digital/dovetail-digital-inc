@@ -90,8 +90,8 @@ export default function MainHero({
               }
               alt={heroImage.data.attributes.alternativeText}
               className="w-[76rem] rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10"
-              width={"1216"}
-              height={"560"}
+              width={"1610"}
+              height={"1211"}
             />
           </div>
         </div>
