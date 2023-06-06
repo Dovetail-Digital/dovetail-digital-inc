@@ -26,7 +26,7 @@ export default function Testimonials({
                   key={String(testimonial.id)}
                   className="sm:inline-block sm:w-full sm:px-4"
                 >
-                  <figure className="rounded-2xl bg-gray-50 p-8 text-sm leading-6 mx-0">
+                  <figure className="rounded-2xl bg-gray-50 p-8 text-sm leading-6 mx-0 shadow-sm ring-1 ring-gray-900/5">
                     <blockquote className="text-gray-900">
                       <p>{`“${testimonial.text}”`}</p>
                     </blockquote>
