@@ -1,5 +1,6 @@
 "use client";
 import { Container, Typography } from "@mui/material";
+import Image from "next/image";
 export default function Testimonials({
   testimonials,
 }: {
@@ -30,7 +31,7 @@ export default function Testimonials({
                       <p>{`“${testimonial.text}”`}</p>
                     </blockquote>
                     <figcaption className="mt-6 flex items-center gap-x-4">
-                      <img
+                      <Image
                         className="h-10 w-10 rounded-full bg-gray-50"
                         src={
                           "https://dovetail-strapi-backend.herokuapp.com" +
@@ -38,6 +39,8 @@ export default function Testimonials({
                             .thumbnail.url
                         }
                         alt=""
+                        width="40"
+                        height="40"
                       />
                       <div>
                         <div className="font-semibold text-gray-900">
