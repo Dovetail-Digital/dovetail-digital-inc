@@ -85,7 +85,7 @@ export default function MainHero({
             <img
               src={
                 "https://dovetail-strapi-backend.herokuapp.com" +
-                heroImage.data.attributes.url
+                heroImage.data.attributes.formats.large.url
               }
               alt={heroImage.data.attributes.alternativeText}
               className="w-[76rem] rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10"
