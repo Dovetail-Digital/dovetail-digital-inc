@@ -1,6 +1,6 @@
 "use client";
 
-import { Card, CardActions, CardContent, CardMedia, Button, Typography } from '@mui/material';
+import { Card, CardActions, CardContent, CardMedia, Button, Typography, Chip } from '@mui/material';
 
 export default function MediaCard(props: {
   image: string,
@@ -13,44 +13,50 @@ export default function MediaCard(props: {
   return (
     <Card
       sx = {{
-        display: 'flex',
-        flexDirection: 'column',
-        padding: 0,
         width: 368,
         height: 438,
-        borderRadius: 1
       }}>
       <CardMedia
         sx = {{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'flex-start',
-          padding: 0,
           height: 200,
-          mixBlendMode: 'darken'
+          mixBlendMode: "darken",
+          marginBottom: "8px",
         }}
         image = { image }
-        title = "Card Media"
       />
-      <CardContent
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'flex-start',
-          padding: 2
-        }}
-      >
-        <Typography gutterBottom variant="h5" component="div">
+      <CardContent>
+        <Typography
+          gutterBottom
+          variant="h5"
+          color="text.primary"
+          sx={{
+            fontSize: "20px",
+            lineHeight: "32px",
+          }}
+        >
           { title }
         </Typography>
-        <Typography variant="body2" color="text.secondary">
+        <Typography variant="body1" color="text.secondary">
           { body }
         </Typography>
       </CardContent>
-      <CardActions>
-        <Button href={ buttonLink } size="small">
-          { buttonText }
-        </Button>
+      <CardActions
+        sx={{
+          paddingLeft: "16px",
+          paddingTop: "0px",
+        }}
+      >
+        <Chip
+          clickable
+          component="a"
+          href={ buttonLink }
+          label={ buttonText }
+          sx={{
+            borderRadius: "4px",
+            fontSize: "16px",
+            height: "38px",
+          }}
+        />
       </CardActions>
     </Card>
   );
