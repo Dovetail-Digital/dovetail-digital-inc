@@ -1,5 +1,5 @@
 import Navigation from "./Navigation";
-import ThemeWrapper from "./ThemeWrapper";
+import ProviderWrapper from "./ProviderWrapper";
 import "./globals.css";
 
 export const metadata = {
@@ -14,7 +14,8 @@ export default async function RootLayout({
 }) {
   let menuLinks: { title: string; url: string }[] = [];
   try {
-    const menu = await fetch("http://127.0.0.1:1337/api/menus/2?populate=*");
+    const strapiServer = String(process.env.STRAPI_SERVER);
+    const menu = await fetch(`${strapiServer}/api/menus/1?populate=*`);
     const body = await menu.json();
     const menuLinksObject = body.data.attributes.menu_links;
     if (menuLinksObject.length <= 0) {
@@ -31,12 +32,12 @@ export default async function RootLayout({
   }
   return (
     <html lang="en">
-      <ThemeWrapper>
+      <ProviderWrapper>
         <body>
           <Navigation menuLinks={menuLinks} />
           {children}
         </body>
-      </ThemeWrapper>
+      </ProviderWrapper>
     </html>
   );
 }
