@@ -24,7 +24,11 @@ export default function MediaCard(props: {
         }}
         image = { image }
       />
-      <CardContent>
+      <CardContent
+        sx={{
+          height: "160px",
+        }}
+      >
         <Typography
           gutterBottom
           variant="h5"
@@ -36,14 +40,24 @@ export default function MediaCard(props: {
         >
           { title }
         </Typography>
-        <Typography variant="body1" color="text.secondary">
+        <Typography
+          variant="body1"
+          color="text.secondary"
+          sx={{
+            // All this nonsense just to truncate the text at 4 lines and trail off with an ellipsis
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+            display: '-webkit-box',
+            WebkitLineClamp: '4',
+            WebkitBoxOrient: 'vertical',
+          }}
+        >
           { body }
         </Typography>
       </CardContent>
       <CardActions
         sx={{
-          paddingLeft: "16px",
-          paddingTop: "0px",
+          padding: "16px",
         }}
       >
         <Chip
