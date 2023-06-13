@@ -39,5 +39,6 @@
     "@storybook/testing-library": "^0.0.14-next.2",
     "prettier": "2.8.8",
     "storybook": "^7.0.9"
-  }
+  },
+  "packageManager": "yarn@3.6.0"
 }

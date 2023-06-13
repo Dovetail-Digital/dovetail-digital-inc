@@ -11,40 +11,10 @@ export default function LogoBanner({
 }) {
   return (
     <div className="py-16">
-      <Typography className="sm:hidden" variant="h5" textAlign="center">
+      <Typography className="sm:hidden" variant="h2" textAlign="center">
         {title}
       </Typography>
-      <Typography
-        textAlign="center"
-        variant="h5"
-        className="hidden sm:block"
-        sx={{
-          "::before": {
-            backgroundColor: "#000",
-            content: '""',
-            display: "inline-block",
-            height: "1px",
-            position: "relative",
-            verticalAlign: "middle",
-            width: "50%",
-            right: "1.5em",
-            marginLeft: "-50%",
-            maxWidth: "115px",
-          },
-          "::after": {
-            backgroundColor: "#000",
-            content: '""',
-            display: "inline-block",
-            height: "1px",
-            position: "relative",
-            verticalAlign: "middle",
-            width: "50%",
-            left: "1.5em",
-            marginRight: "-50%",
-            maxWidth: "115px",
-          },
-        }}
-      >
+      <Typography textAlign="center" variant="h2" className="hidden sm:block">
         {title}
       </Typography>
       <Stack
