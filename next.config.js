@@ -9,6 +9,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "dovetail-strapi-backend.herokuapp.com",
       },
+      {
+        protocol: "https",
+        hostname: "dovetail-digital-corpsite.s3.ca-central-1.amazonaws.com",
+      },
     ],
   },
 };

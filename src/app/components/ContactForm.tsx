@@ -53,9 +53,8 @@ export default function ContactForm({
         });
       })
       .catch((err) => {
-        console.log("Error:", err);
+        console.log("Err", err);
       });
-    console.log("Submitted");
   }
 
   return (

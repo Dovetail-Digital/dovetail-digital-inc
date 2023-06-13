@@ -34,7 +34,6 @@ export default function Testimonials({
                       <Image
                         className="h-10 w-10 rounded-full bg-gray-50"
                         src={
-                          "https://dovetail-strapi-backend.herokuapp.com" +
                           testimonial.profilePicture.data.attributes.formats
                             .thumbnail.url
                         }

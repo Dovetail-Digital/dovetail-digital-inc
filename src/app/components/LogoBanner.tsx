@@ -34,10 +34,7 @@ export default function LogoBanner({
             return (
               <Image
                 key={logo.title}
-                src={
-                  "https://dovetail-strapi-backend.herokuapp.com" +
-                  logo.image.data[0].attributes.url
-                }
+                src={logo.image.data[0].attributes.url}
                 alt={logo.alt}
                 width={160}
                 height={60}

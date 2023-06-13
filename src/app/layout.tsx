@@ -28,7 +28,7 @@ export default async function RootLayout({
       });
     }
   } catch (error) {
-    console.log("Error", error);
+    console.log("Err", error);
   }
   return (
     <html lang="en">
