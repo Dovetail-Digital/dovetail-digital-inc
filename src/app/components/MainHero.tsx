@@ -83,10 +83,7 @@ export default function MainHero({
         </div>
         <div className="absolute top-0 left-[60%] right-0 bottom-0 w-full max-h-[35rem] overflow-hidden rounded-md">
           <Image
-            src={
-              "https://dovetail-strapi-backend.herokuapp.com" +
-              heroImage.data.attributes.url
-            }
+            src={heroImage.data.attributes.url}
             alt={heroImage.data.attributes.alternativeText}
             className="hidden lg:block w-[76rem] rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10 object-left object-contain"
             width={"1141"}

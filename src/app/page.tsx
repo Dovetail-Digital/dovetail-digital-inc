@@ -5,6 +5,7 @@ import ContactUs from "./components/ContactUs";
 export default async function Home() {
   // @todo we may not want to do this, because the URL will always be public..
   const formSparkUrl = String(process.env.FORMSPARK_URL);
+  const environment: string = process.env.ENVIRONMENT ?? "production";
   let homePageData;
   try {
     // The homepage is always going to be / so we can hardcode the following pattern
@@ -13,7 +14,7 @@ export default async function Home() {
     );
     homePageData = await response.json();
   } catch (err) {
-    console.log("R", err);
+    console.log("Err", err);
   }
 
   return (
