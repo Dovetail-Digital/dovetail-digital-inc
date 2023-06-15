@@ -1,5 +1,5 @@
 "use client";
-import { Container } from "@mui/material";
+import { Container, Stack } from "@mui/material";
 import MediaCard from "./CasestudyCard";
 
 interface card {
@@ -28,18 +28,20 @@ interface card {
 export default function CardBanner({ card }: { card: card[] }) {
   return (
     <Container>
-      {card.map((cardItem: card) => {
-        return (
-          <MediaCard
-            image={cardItem.image.data.attributes.url}
-            title={cardItem.title}
-            body={cardItem.description}
-            buttonText="Learn more"
-            buttonLink={cardItem.url}
-            alt={cardItem.image.data.attributes.alternativeText}
-          />
-        );
-      })}
+      <Stack direction="row" rowGap={4} spacing={4} useFlexGap flexWrap="wrap">
+        {card.map((cardItem: card) => {
+          return (
+            <MediaCard
+              image={cardItem.image.data.attributes.url}
+              title={cardItem.title}
+              body={cardItem.description}
+              buttonText="Learn more"
+              buttonLink={cardItem.url}
+              alt={cardItem.image.data.attributes.alternativeText}
+            />
+          );
+        })}
+      </Stack>
     </Container>
   );
 }

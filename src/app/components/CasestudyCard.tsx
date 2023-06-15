@@ -21,7 +21,7 @@ export default function MediaCard(props: {
   return (
     <Card
       sx={{
-        width: 368,
+        width: 360,
         height: 438,
       }}
     >
