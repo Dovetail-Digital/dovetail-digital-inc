@@ -1,28 +1,41 @@
 "use client";
 
-import { Card, CardActions, CardContent, CardMedia, Button, Typography, Chip } from '@mui/material';
+import {
+  Card,
+  CardActions,
+  CardContent,
+  CardMedia,
+  Typography,
+  Chip,
+} from "@mui/material";
 
 export default function MediaCard(props: {
-  image: string,
-  title: string,
-  body: string,
-  buttonText: string,
-  buttonLink: string,
+  image: string;
+  title: string;
+  body: string;
+  buttonText: string;
+  buttonLink: string;
+  alt: string;
 }) {
-  const {image, title, body, buttonText, buttonLink} = props;
+  const { image, title, body, buttonText, buttonLink, alt } = props;
   return (
     <Card
-      sx = {{
+      sx={{
         width: 368,
         height: 438,
-      }}>
+      }}
+    >
       <CardMedia
-        sx = {{
+        component="img"
+        alt={alt}
+        sx={{
           height: 200,
           mixBlendMode: "darken",
-          marginBottom: "8px",
+          marginBottom: "2",
+          backgroundSize: "contain",
+          mx: 2,
         }}
-        image = { image }
+        image={image}
       />
       <CardContent
         sx={{
@@ -38,21 +51,21 @@ export default function MediaCard(props: {
             lineHeight: "32px",
           }}
         >
-          { title }
+          {title}
         </Typography>
         <Typography
           variant="body1"
           color="text.secondary"
           sx={{
             // All this nonsense just to truncate the text at 4 lines and trail off with an ellipsis
-            overflow: 'hidden',
-            textOverflow: 'ellipsis',
-            display: '-webkit-box',
-            WebkitLineClamp: '4',
-            WebkitBoxOrient: 'vertical',
+            overflow: "hidden",
+            textOverflow: "ellipsis",
+            display: "-webkit-box",
+            WebkitLineClamp: "4",
+            WebkitBoxOrient: "vertical",
           }}
         >
-          { body }
+          {body}
         </Typography>
       </CardContent>
       <CardActions
@@ -63,8 +76,8 @@ export default function MediaCard(props: {
         <Chip
           clickable
           component="a"
-          href={ buttonLink }
-          label={ buttonText }
+          href={buttonLink}
+          label={buttonText}
           sx={{
             borderRadius: "4px",
             fontSize: "16px",
