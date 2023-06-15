@@ -1,3 +1,4 @@
+import CardBanner from "./components/CardBanner";
 import LogoBanner from "./components/LogoBanner";
 import MainHero from "./components/MainHero";
 import Testimonials from "./components/Testimonials";
@@ -6,6 +7,7 @@ const componentMapper: { [key: string]: any } = {
   "banners.hero-banner": MainHero,
   "banners.logo-banner": LogoBanner,
   "banners.testimonials-banner": Testimonials,
+  "banners.card-banner": CardBanner,
 };
 
 export default function ComponentMapper({
