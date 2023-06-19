@@ -28,7 +28,14 @@ interface card {
 export default function CardBanner({ card }: { card: card[] }) {
   return (
     <Container>
-      <Stack direction="row" rowGap={4} spacing={4} useFlexGap flexWrap="wrap">
+      <Stack
+        direction="row"
+        rowGap={4}
+        spacing={4}
+        useFlexGap
+        flexWrap="wrap"
+        justifyContent="center"
+      >
         {card.map((cardItem: card) => {
           return (
             <MediaCard
