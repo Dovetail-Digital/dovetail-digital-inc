@@ -5,11 +5,11 @@ import {
   CardActions,
   CardContent,
   CardMedia,
-  Typography,
   Chip,
+  Typography,
 } from "@mui/material";
 
-export default function MediaCard(props: {
+export default function CasestudyCard(props: {
   image: string;
   title: string;
   body: string;
@@ -70,7 +70,7 @@ export default function MediaCard(props: {
       </CardContent>
       <CardActions
         sx={{
-          padding: "16px",
+          padding: 2,
         }}
       >
         <Chip
@@ -82,6 +82,10 @@ export default function MediaCard(props: {
             borderRadius: "4px",
             fontSize: "16px",
             height: "38px",
+            '&:hover': {
+              backgroundColor: '#1B9B74',
+              color: '#FFFFFF',
+            },
           }}
         />
       </CardActions>
