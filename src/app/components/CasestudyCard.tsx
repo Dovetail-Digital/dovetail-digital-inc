@@ -9,7 +9,7 @@ import {
   Chip,
 } from "@mui/material";
 
-export default function MediaCard(props: {
+export default function CastStudyCard(props: {
   image: string;
   title: string;
   body: string;

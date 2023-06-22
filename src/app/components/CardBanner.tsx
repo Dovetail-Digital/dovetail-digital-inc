@@ -1,6 +1,6 @@
 "use client";
 import { Container, Stack } from "@mui/material";
-import MediaCard from "./CasestudyCard";
+import CaseStudyCard from "./CaseStudyCard";
 
 interface card {
   id: number;
@@ -38,7 +38,7 @@ export default function CardBanner({ card }: { card: card[] }) {
       >
         {card.map((cardItem: card) => {
           return (
-            <MediaCard
+            <CaseStudyCard
               image={cardItem.image.data.attributes.url}
               title={cardItem.title}
               body={cardItem.description}
