@@ -7,13 +7,15 @@ import { Container, Typography } from "@mui/material";
 
 export default function Navigation({
   menuLinks,
+  customClasses,
 }: {
   menuLinks: { title: string; url: string }[];
+  customClasses?: string;
 }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
     <Container className="relative">
-      <header className="absolute inset-x-0 top-0 z-50">
+      <header className={"absolute inset-x-0 top-0 z-50 " + customClasses}>
         <nav
           className="flex items-center justify-between p-6"
           aria-label="Global"

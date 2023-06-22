@@ -64,21 +64,25 @@ export default function MainHero({
           </Typography>
           <p className="mt-6 text-lg leading-8 text-gray-300">{introText}</p>
           <div className="mt-10 flex items-center gap-x-6">
-            <Button
-              variant="contained"
-              color="primary"
-              className="hover:bg-white hover:text-black"
-              href={cta[0].url}
-            >
-              {cta[0].text}
-            </Button>
-            <Button
-              variant="outlined"
-              className="text-white border-white hover:border-dovetail-green hover:text-dovetail-green hover:opacity-90"
-              href={cta[1].url}
-            >
-              {cta[1].text}
-            </Button>
+            {cta[0] && (
+              <Button
+                variant="contained"
+                color="primary"
+                className="hover:bg-white hover:text-black"
+                href={cta[0].url}
+              >
+                {cta[0].text}
+              </Button>
+            )}
+            {cta[1] && (
+              <Button
+                variant="outlined"
+                className="text-white border-white hover:border-dovetail-green hover:text-dovetail-green hover:opacity-90"
+                href={cta[1].url}
+              >
+                {cta[1].text}
+              </Button>
+            )}
           </div>
         </div>
         <div className="absolute top-0 left-[60%] right-0 bottom-0 w-full max-h-[35rem] overflow-hidden rounded-md">

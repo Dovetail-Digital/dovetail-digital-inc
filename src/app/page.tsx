@@ -22,7 +22,7 @@ export default async function Home() {
       {homePageData.data[0].attributes.pageComponents.map(
         (sectionData: any, index: Key) => {
           return (
-            <div className="odd:bg-gray-50">
+            <div className="odd:bg-dovetail-gray">
               <ComponentMapper key={index} sectionData={sectionData} />
             </div>
           );

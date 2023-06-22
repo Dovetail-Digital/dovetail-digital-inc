@@ -26,13 +26,13 @@ export default function Testimonials({
                   key={String(testimonial.id)}
                   className="sm:inline-block sm:w-full sm:px-4"
                 >
-                  <figure className="rounded-2xl bg-gray-50 p-8 text-sm leading-6 mx-0 shadow-sm ring-1 ring-gray-900/5">
+                  <figure className="rounded-2xl bg-dovetail-gray p-8 text-sm leading-6 mx-0 shadow-sm ring-1 ring-gray-900/5">
                     <blockquote className="text-gray-900">
                       <p>{`“${testimonial.text}”`}</p>
                     </blockquote>
                     <figcaption className="mt-6 flex items-center gap-x-4">
                       <Image
-                        className="h-10 w-10 rounded-full bg-gray-50"
+                        className="h-10 w-10 rounded-full bg-dovetail-gray"
                         src={
                           testimonial.profilePicture.data.attributes.formats
                             .thumbnail.url
