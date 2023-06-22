@@ -1,6 +1,8 @@
 import { Key } from "react";
 import ComponentMapper from "../ComponentMapper";
 import TestComponent from "../components/TestComponent";
+import ContactUs from "../components/ContactUs";
+import TwoColImage from "../components/TwoColImage";
 
 export default async function Page({
   params,
@@ -9,11 +11,13 @@ export default async function Page({
   params: { slug: string };
   children: React.ReactNode;
 }) {
+  const formSparkUrl = String(process.env.FORMSPARK_URL);
   let pageData: any;
   try {
+    const urlSlug = params.slug.join("/");
     // The homepage is always going to be / so we can hardcode the following pattern
     const response = await fetch(
-      `${process.env.STRAPI_SERVER}/api/landing-pages?filters[url][$eq]=/${params.slug[0]}&populate[pageComponents][on][banners.logo-banner][populate]=logo.image&populate[pageComponents][on][banners.hero-banner][populate]=*&populate[pageComponents][on][banners.testimonials-banner][populate]=testimonials.profilePicture&populate[pageComponents][on][banners.card-banner][populate]=card.image&populate[pageComponents][on][banners.image-with-text][populate]=*`
+      `${process.env.STRAPI_SERVER}/api/landing-pages?filters[url][$eq]=/${urlSlug}&populate[pageComponents][on][banners.logo-banner][populate]=logo.image&populate[pageComponents][on][banners.hero-banner][populate]=*&populate[pageComponents][on][banners.testimonials-banner][populate]=testimonials.profilePicture&populate[pageComponents][on][banners.card-banner][populate]=card.image&populate[pageComponents][on][banners.image-with-text][populate]=*`
     );
     pageData = await response.json();
     if (pageData.data.length === 0) {
@@ -34,6 +38,10 @@ export default async function Page({
           );
         }
       )}
+      <TwoColImage />
+      <div className="bg-white">
+        <ContactUs formSparkUrl={formSparkUrl} />
+      </div>
     </>
   );
 }
