@@ -32,8 +32,8 @@ export default function CastStudyCard(props: {
           height: 200,
           mixBlendMode: "darken",
           marginBottom: "2",
-          backgroundSize: "contain",
-          mx: 2,
+          objectFit: "contain",
+          padding: 2,
         }}
         image={image}
       />
