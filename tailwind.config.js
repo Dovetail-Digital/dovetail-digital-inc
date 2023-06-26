@@ -21,6 +21,7 @@ module.exports = {
         ...colors,
         "dovetail-blue": "#83C1C0",
         "dovetail-green": "#1B9B74",
+        "dovetail-gray": "#F5F5F5",
       },
     },
   },

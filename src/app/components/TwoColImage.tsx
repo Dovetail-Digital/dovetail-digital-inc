@@ -1,28 +1,58 @@
 "use client";
 
-import { Box } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 
-export default function TwoColImage() {
+interface imageData {
+  id: string;
+  attributes: {
+    name: string;
+    alternativeText: string;
+    url: string;
+    caption: string;
+  };
+}
+
+interface images {
+  data: Array<imageData>;
+}
+
+export default function TwoColImage({ images }: { images: images }) {
   return (
-    <Box>
-      <Box
-        width={1 / 2}
-        height={"100%"}
-        sx={{
-          backgroundImage: `url(
-            "https://dovetail-digital-corpsite-dev.s3.ca-central-1.amazonaws.com/legacy_65409a740f.png"
+    <Stack
+      direction="row"
+      useFlexGap
+      flexWrap="wrap"
+      justifyContent="center"
+      spacing={4}
+    >
+      {images.data.map((image: imageData) => {
+        return (
+          <Box
+            sx={{
+              minHeight: { xs: 600, lg: 1300 },
+              minWidth: { xs: 300, lg: 550 },
+              overflow: "hidden",
+            }}
+          >
+            <Typography variant="h2" sx={{ textAlign: "center" }}>
+              {image.attributes.caption}
+            </Typography>
+            <Box
+              id={image.id}
+              sx={{
+                width: "100%",
+                height: "100%",
+                backgroundImage: `url(
+            ${image.attributes.url}
           )`,
-        }}
-      ></Box>
-      <Box
-        width={1 / 2}
-        height={"100%"}
-        sx={{
-          backgroundImage: `url(
-            "https://dovetail-digital-corpsite-dev.s3.ca-central-1.amazonaws.com/legacy_65409a740f.png"
-          )`,
-        }}
-      ></Box>
-    </Box>
+                backgroundSize: "contain",
+                backgroundRepeat: "no-repeat",
+                backgroundPositionX: "center",
+              }}
+            ></Box>
+          </Box>
+        );
+      })}
+    </Stack>
   );
 }
