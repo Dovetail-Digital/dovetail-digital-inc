@@ -14,7 +14,7 @@ export default function ImageWithText({
   textLeft: boolean;
   image: any;
   bodyText: string;
-  bodyText: boolean;
+  backgroundContain: boolean;
 }) {
   const md = new Remarkable();
   return (

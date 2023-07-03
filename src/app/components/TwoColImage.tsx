@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Grid, Stack, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import Image from "next/image";
 
 interface imageData {
@@ -20,7 +20,6 @@ interface images {
 }
 
 export default function TwoColImage({ images }: { images: images }) {
-  console.log("I", images);
   return (
     <Grid container sx={{ justifyContent: "center" }} className="py-12">
       {images.data.map((image: imageData) => {
