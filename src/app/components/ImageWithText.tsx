@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Container, Grid, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import Image from "next/image";
 import { Remarkable } from "remarkable";
 
