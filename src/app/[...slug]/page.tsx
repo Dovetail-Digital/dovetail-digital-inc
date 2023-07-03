@@ -2,13 +2,7 @@ import { Key } from "react";
 import ComponentMapper from "../ComponentMapper";
 import ContactUs from "../components/ContactUs";
 
-export default async function Page({
-  params,
-  children,
-}: {
-  params: { slug: string };
-  children: React.ReactNode;
-}) {
+export default async function Page({ params }: { params: { slug: string[] } }) {
   const formSparkUrl = String(process.env.FORMSPARK_URL);
   let pageData: any;
   try {
