@@ -14,7 +14,7 @@
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.11.16",
-    "@mui/material": "^5.12.3",
+    "@mui/material": "^5.13.3",
     "autoprefixer": "10.4.14",
     "next": "13.3.4",
     "notistack": "^3.0.1",
@@ -26,19 +26,19 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
-    "@storybook/addon-essentials": "^7.0.9",
-    "@storybook/addon-interactions": "^7.0.9",
-    "@storybook/addon-links": "^7.0.9",
-    "@storybook/blocks": "^7.0.9",
-    "@storybook/nextjs": "^7.0.9",
-    "@storybook/react": "^7.0.9",
-    "@storybook/testing-library": "^0.0.14-next.2",
+    "@storybook/addon-essentials": "^7.0.18",
+    "@storybook/addon-interactions": "^7.0.18",
+    "@storybook/addon-links": "^7.0.18",
+    "@storybook/blocks": "^7.0.18",
+    "@storybook/nextjs": "^7.0.18",
+    "@storybook/react": "^7.0.18",
+    "@storybook/testing-library": "0.0.14-next.2",
     "@types/node": "18.16.3",
     "@types/react": "18.2.0",
     "@types/react-dom": "18.2.1",
     "eslint": "8.39.0",
     "eslint-config-next": "13.3.4",
     "prettier": "2.8.8",
-    "storybook": "^7.0.9"
+    "storybook": "^7.0.18"
   }
 }

@@ -1,6 +1,7 @@
 "use client";
 
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Grid, Stack, Typography } from "@mui/material";
+import Image from "next/image";
 
 interface imageData {
   id: string;
@@ -9,6 +10,8 @@ interface imageData {
     alternativeText: string;
     url: string;
     caption: string;
+    width: number;
+    height: number;
   };
 }
 
@@ -17,42 +20,29 @@ interface images {
 }
 
 export default function TwoColImage({ images }: { images: images }) {
+  console.log("I", images);
   return (
-    <Stack
-      direction="row"
-      useFlexGap
-      flexWrap="wrap"
-      justifyContent="center"
-      spacing={4}
-    >
+    <Grid container sx={{ justifyContent: "center" }} className="py-12">
       {images.data.map((image: imageData) => {
         return (
-          <Box
-            sx={{
-              minHeight: { xs: 600, lg: 1300 },
-              minWidth: { xs: 300, lg: 550 },
-              overflow: "hidden",
-            }}
-          >
-            <Typography variant="h2" sx={{ textAlign: "center" }}>
+          <Grid item xs={12} sm={4} key={image.id} mx={4}>
+            <Typography variant="h4" sx={{ textAlign: "center" }} mb={2}>
               {image.attributes.caption}
             </Typography>
-            <Box
-              id={image.id}
-              sx={{
-                width: "100%",
-                height: "100%",
-                backgroundImage: `url(
-            ${image.attributes.url}
-          )`,
-                backgroundSize: "contain",
-                backgroundRepeat: "no-repeat",
-                backgroundPositionX: "center",
+            <Image
+              src={image.attributes.url}
+              alt={image.attributes.alternativeText}
+              width={image.attributes.width}
+              height={image.attributes.height}
+              style={{
+                objectFit: "contain",
+                maxWidth: "100%",
+                height: "auto",
               }}
-            ></Box>
-          </Box>
+            />
+          </Grid>
         );
       })}
-    </Stack>
+    </Grid>
   );
 }

@@ -10,7 +10,7 @@ export default function LogoBanner({
   logo: any;
 }) {
   return (
-    <div className="py-16">
+    <div className="py-12">
       <Typography className="sm:hidden" variant="h2" textAlign="center">
         {title}
       </Typography>

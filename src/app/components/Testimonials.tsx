@@ -14,7 +14,7 @@ export default function Testimonials({
 }) {
   return (
     <Container>
-      <div className="bg-white py-16">
+      <div className="bg-white py-12">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-xl text-center">
             <Typography variant="h2">Testimonials</Typography>

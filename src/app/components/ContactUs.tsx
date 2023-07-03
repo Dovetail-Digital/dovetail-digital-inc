@@ -6,7 +6,7 @@ import ContactForm from "./ContactForm";
 
 export default function ContactUs({ formSparkUrl }: { formSparkUrl: string }) {
   return (
-    <Container className="py-16">
+    <Container className="py-12">
       <Typography variant="h2" textAlign={"center"}>
         Contact us
       </Typography>
