@@ -9,7 +9,7 @@ import {
   Typography,
 } from "@mui/material";
 
-export default function CastStudyCard(props: {
+export default function CaseStudyCard(props: {
   image: string;
   title: string;
   body: string;
