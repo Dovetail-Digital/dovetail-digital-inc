@@ -16,6 +16,7 @@ export default function ContactUs({ formSparkUrl }: { formSparkUrl: string }) {
         useFlexGap
         sx={{ marginTop: "3rem" }}
         className="md:flex items-center justify-around"
+        overflow="hidden"
       >
         <Image
           src={"/contact-us.jpg"}
