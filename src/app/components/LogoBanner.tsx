@@ -51,6 +51,7 @@ export default function LogoBanner({
                   height: "auto",
                   maxWidth: "165px",
                   maxHeight: "55px",
+                  objectFit: "contain",
                 }}
               />
             );
