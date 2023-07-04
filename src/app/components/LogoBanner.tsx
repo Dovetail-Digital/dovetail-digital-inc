@@ -42,7 +42,7 @@ export default function LogoBanner({
                 alt={logo.alt}
                 width={logo.image.data[0].attributes.width}
                 height={logo.image.data[0].attributes.height}
-                style={{ height: "auto", maxWidth: 100 }}
+                style={{ height: "auto", maxWidth: "160px" }}
               />
             );
           }
