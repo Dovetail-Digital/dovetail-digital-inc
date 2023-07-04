@@ -51,8 +51,8 @@ export default function LogoBanner({
                 height={logo.image.data[0].attributes.height}
                 style={{
                   height: "auto",
-                  maxWidth: "160px",
-                  maxHeight: "100px",
+                  maxWidth: "165px",
+                  maxHeight: "55px",
                 }}
               />
             );
