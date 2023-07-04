@@ -30,25 +30,23 @@ export default function LogoBanner({
             title: string;
             alt: string;
             image: {
-              data: [
-                {
-                  attributes: {
-                    url: string;
-                    width: number;
-                    height: number;
-                    alternativeText: string;
-                  };
-                }
-              ];
+              data: {
+                attributes: {
+                  url: string;
+                  width: number;
+                  height: number;
+                  alternativeText: string;
+                };
+              };
             };
           }) => {
             return (
               <Image
                 key={logo.title}
-                src={logo.image.data[0].attributes.url}
-                alt={logo.image.data[0].attributes.alternativeText}
-                width={logo.image.data[0].attributes.width}
-                height={logo.image.data[0].attributes.height}
+                src={logo.image.data.attributes.url}
+                alt={logo.image.data.attributes.alternativeText}
+                width={logo.image.data.attributes.width}
+                height={logo.image.data.attributes.height}
                 style={{
                   height: "auto",
                   maxWidth: "165px",
