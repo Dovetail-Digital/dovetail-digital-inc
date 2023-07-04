@@ -1,3 +1,4 @@
+export const revalidate = 60;
 import { Key } from "react";
 import ComponentMapper from "../ComponentMapper";
 import ContactUs from "../components/ContactUs";
