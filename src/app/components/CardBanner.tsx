@@ -27,28 +27,25 @@ interface card {
 }
 export default function CardBanner({ card }: { card: card[] }) {
   return (
-    <Container>
-      <Stack
-        direction="row"
-        rowGap={4}
-        spacing={4}
-        useFlexGap
-        flexWrap="wrap"
-        justifyContent="center"
-      >
-        {card.map((cardItem: card) => {
-          return (
-            <CaseStudyCard
-              image={cardItem.image.data.attributes.url}
-              title={cardItem.title}
-              body={cardItem.description}
-              buttonText="Learn more"
-              buttonLink={cardItem.url}
-              alt={cardItem.image.data.attributes.alternativeText}
-            />
-          );
-        })}
-      </Stack>
-    </Container>
+    <Stack
+      direction="row"
+      rowGap={4}
+      spacing={4}
+      justifyContent={"center"}
+      p={4}
+    >
+      {card.map((cardItem: card) => {
+        return (
+          <CaseStudyCard
+            image={cardItem.image.data.attributes.url}
+            title={cardItem.title}
+            body={cardItem.description}
+            buttonText="Learn more"
+            buttonLink={cardItem.url}
+            alt={cardItem.image.data.attributes.alternativeText}
+          />
+        );
+      })}
+    </Stack>
   );
 }
