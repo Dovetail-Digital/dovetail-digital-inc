@@ -37,7 +37,10 @@ export default function Testimonials({
                           testimonial.profilePicture.data.attributes.formats
                             .thumbnail.url
                         }
-                        alt=""
+                        alt={
+                          testimonial.profilePicture.data.attributes
+                            .alternativeText
+                        }
                         width="40"
                         height="40"
                       />

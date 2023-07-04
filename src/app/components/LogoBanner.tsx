@@ -31,7 +31,14 @@ export default function LogoBanner({
             alt: string;
             image: {
               data: [
-                { attributes: { url: string; width: number; height: number } }
+                {
+                  attributes: {
+                    url: string;
+                    width: number;
+                    height: number;
+                    alternativeText: string;
+                  };
+                }
               ];
             };
           }) => {
@@ -39,7 +46,7 @@ export default function LogoBanner({
               <Image
                 key={logo.title}
                 src={logo.image.data[0].attributes.url}
-                alt={logo.alt}
+                alt={logo.image.data[0].attributes.alternativeText}
                 width={logo.image.data[0].attributes.width}
                 height={logo.image.data[0].attributes.height}
                 style={{
