@@ -27,7 +27,7 @@ interface card {
 }
 export default function CardBanner({ card }: { card: card[] }) {
   return (
-    <Grid container p={4}>
+    <Grid container spacing={2}>
       {card.map((cardItem: card) => {
         return (
           <Grid item xs={3}>
