@@ -1,5 +1,5 @@
 "use client";
-import { Container, Stack } from "@mui/material";
+import { Container, Grid, Stack } from "@mui/material";
 import CaseStudyCard from "./CaseStudyCard";
 
 interface card {
@@ -27,25 +27,21 @@ interface card {
 }
 export default function CardBanner({ card }: { card: card[] }) {
   return (
-    <Stack
-      direction="row"
-      rowGap={4}
-      spacing={4}
-      justifyContent={"center"}
-      p={4}
-    >
+    <Grid container p={4}>
       {card.map((cardItem: card) => {
         return (
-          <CaseStudyCard
-            image={cardItem.image.data.attributes.url}
-            title={cardItem.title}
-            body={cardItem.description}
-            buttonText="Learn more"
-            buttonLink={cardItem.url}
-            alt={cardItem.image.data.attributes.alternativeText}
-          />
+          <Grid item xs={3}>
+            <CaseStudyCard
+              image={cardItem.image.data.attributes.url}
+              title={cardItem.title}
+              body={cardItem.description}
+              buttonText="Learn more"
+              buttonLink={cardItem.url}
+              alt={cardItem.image.data.attributes.alternativeText}
+            />
+          </Grid>
         );
       })}
-    </Stack>
+    </Grid>
   );
 }
