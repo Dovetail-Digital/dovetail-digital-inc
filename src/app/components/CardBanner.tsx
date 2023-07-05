@@ -27,7 +27,7 @@ interface card {
 }
 export default function CardBanner({ card }: { card: card[] }) {
   return (
-    <Grid container spacing={2}>
+    <Grid container spacing={1} justifyContent={"center"}>
       {card.map((cardItem: card) => {
         return (
           <Grid item xs={3}>
