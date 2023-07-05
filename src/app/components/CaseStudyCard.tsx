@@ -32,7 +32,7 @@ export default function CaseStudyCard(props: {
           height: 200,
           mixBlendMode: "darken",
           marginBottom: "2",
-          objectFit: "contain",
+          objectFit: "scale-down",
           padding: 2,
         }}
         image={image}
