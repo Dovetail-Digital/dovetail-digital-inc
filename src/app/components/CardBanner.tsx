@@ -30,7 +30,7 @@ export default function CardBanner({ card }: { card: card[] }) {
     <Grid container spacing={1} justifyContent={"center"}>
       {card.map((cardItem: card) => {
         return (
-          <Grid item xs={3}>
+          <Grid item xs={2}>
             <CaseStudyCard
               image={cardItem.image.data.attributes.url}
               title={cardItem.title}
