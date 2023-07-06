@@ -5,6 +5,7 @@ import {
   StyledEngineProvider,
   ThemeProvider,
   createTheme,
+  responsiveFontSizes,
 } from "@mui/material";
 import { SnackbarProvider } from "notistack";
 declare module "@mui/material/styles" {
@@ -22,7 +23,7 @@ declare module "@mui/material/styles" {
 }
 export default function ProviderWrapper({ children }: { children: any }) {
   const font = "'Montserrat', sans-serif";
-  const theme = createTheme({
+  let theme = createTheme({
     palette: {
       primary: {
         main: "#089B74",
@@ -33,17 +34,9 @@ export default function ProviderWrapper({ children }: { children: any }) {
     },
     typography: {
       fontFamily: font,
-      h3: {
-        fontWeight: "bold",
-        fontSize: "48pt",
-        lineHeight: "116%",
-      },
-      h5: {
-        fontSize: "24pt",
-        fontWeight: "bold",
-      },
     },
   });
+  theme = responsiveFontSizes(theme);
   return (
     <StyledEngineProvider injectFirst>
       <CssBaseline />

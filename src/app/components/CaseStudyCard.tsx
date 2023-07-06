@@ -47,7 +47,7 @@ export default function CaseStudyCard(props: {
           variant="h5"
           color="text.primary"
           sx={{
-            fontSize: "20px",
+            fontSize: "1.25rem",
             lineHeight: "32px",
           }}
         >
@@ -80,7 +80,7 @@ export default function CaseStudyCard(props: {
           label={buttonText}
           sx={{
             borderRadius: "4px",
-            fontSize: "16px",
+            fontSize: "1remx",
             height: "38px",
             "&:hover": {
               backgroundColor: "#1B9B74",

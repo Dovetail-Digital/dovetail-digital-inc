@@ -10,7 +10,7 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
     const urlSlug = params.slug.join("/");
     // The homepage is always going to be / so we can hardcode the following pattern
     const response = await fetch(
-      `${process.env.STRAPI_SERVER}/api/landing-pages?filters[url][$eq]=/${urlSlug}&populate[pageComponents][on][banners.logo-banner][populate]=logo.image&populate[pageComponents][on][banners.hero-banner][populate]=*&populate[pageComponents][on][banners.testimonials-banner][populate]=testimonials.profilePicture&populate[pageComponents][on][banners.card-banner][populate]=card.image&populate[pageComponents][on][banners.image-with-text][populate]=*&populate[pageComponents][on][banners.two-column-image][populate]=images`
+      `${process.env.STRAPI_SERVER}/api/landing-pages?filters[url][$eq]=/${urlSlug}&populate[pageComponents][on][banners.logo-banner][populate]=logo.image&populate[pageComponents][on][banners.hero-banner][populate]=*&populate[pageComponents][on][banners.testimonials-banner][populate]=testimonials.profilePicture&populate[pageComponents][on][banners.card-banner][populate]=card.image&populate[pageComponents][on][banners.image-with-text][populate]=*&populate[pageComponents][on][banners.two-column-image][populate]=images&populate[pageComponents][on][banners.secondary-hero][populate]=*`
     );
     pageData = await response.json();
     if (pageData.data.length === 0) {
