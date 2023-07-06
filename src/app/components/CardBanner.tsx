@@ -27,10 +27,10 @@ interface card {
 }
 export default function CardBanner({ card }: { card: card[] }) {
   return (
-    <Grid container spacing={1} justifyContent={"center"}>
+    <Grid container spacing={4} justifyContent={"center"} p={4}>
       {card.map((cardItem: card) => {
         return (
-          <Grid item xs={3}>
+          <Grid item>
             <CaseStudyCard
               image={cardItem.image.data.attributes.url}
               title={cardItem.title}
