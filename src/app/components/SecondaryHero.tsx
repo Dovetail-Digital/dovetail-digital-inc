@@ -43,12 +43,18 @@ export default function SecondaryHero({
           zIndex: 1,
           display: "flex",
           height: "100%",
-          alignItems: "center",
+          alignItems: "end",
           justifyContent: "center",
+          pb: "50px",
         }}
       >
-        <Typography variant="h1" textAlign="center" color={"white"}>
-          inside the container
+        <Typography
+          variant="h1"
+          textAlign="center"
+          color={"white"}
+          sx={{ mt: 4 }}
+        >
+          {title}
         </Typography>
       </Container>
     </div>

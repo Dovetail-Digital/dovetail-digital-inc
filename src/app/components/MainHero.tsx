@@ -57,9 +57,9 @@ export default function MainHero({
           }}
         />
       </div>
-      <Container className="relative pb-24 sm:pb-80">
+      <Container className="relative pb-24">
         <div className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8">
-          <Typography variant="h3" color="white">
+          <Typography variant="h1" color="white">
             {title}
           </Typography>
           <p className="mt-6 text-lg leading-8 text-gray-300">{introText}</p>
