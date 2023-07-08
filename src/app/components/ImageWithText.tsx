@@ -46,7 +46,7 @@ export default function ImageWithText({
         height={props.item.attributes.height}
         alt={props.item.attributes.alternativeText}
         style={{
-          maxHeight: "800px",
+          maxHeight: "400px",
           objectFit: "contain",
           maxWidth: "100%",
           height: "auto",
