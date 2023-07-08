@@ -10,6 +10,7 @@ export default function ImageWithText({
   textLeft,
   image,
   bodyText,
+  limitImageSize,
 }: {
   titleText: string;
   textLeft: boolean;
@@ -26,6 +27,7 @@ export default function ImageWithText({
     ];
   };
   bodyText: string;
+  limitImageSize: boolean;
 }) {
   const md = new Remarkable();
 
@@ -86,12 +88,20 @@ export default function ImageWithText({
             width={image.data[0].attributes.width}
             height={image.data[0].attributes.height}
             alt={image.data[0].attributes.alternativeText}
-            style={{
-              maxHeight: "800px",
-              objectFit: "contain",
-              maxWidth: "100%",
-              height: "auto",
-            }}
+            style={
+              limitImageSize
+                ? {
+                    maxHeight: "800px",
+                    objectFit: "contain",
+                    maxWidth: "100%",
+                    height: "auto",
+                  }
+                : {
+                    objectFit: "cover",
+                    width: "100%",
+                    height: "100%",
+                  }
+            }
           />
         )}
       </Grid>
