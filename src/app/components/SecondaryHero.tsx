@@ -1,5 +1,5 @@
 "use client";
-import { Container, Typography } from "@mui/material";
+import { Container, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 
 export default function SecondaryHero({
@@ -48,14 +48,27 @@ export default function SecondaryHero({
           pb: "50px",
         }}
       >
-        <Typography
-          variant="h1"
-          textAlign="center"
-          color={"white"}
-          sx={{ mt: 4 }}
-        >
-          {title}
-        </Typography>
+        <Stack>
+          <Typography
+            color="white"
+            textAlign={"center"}
+            variant="h5"
+            component={"h1"}
+            textTransform={"uppercase"}
+            sx={{ opacity: 0.75 }}
+          >
+            {secondaryText}
+          </Typography>
+          <Typography
+            variant="h1"
+            textAlign="center"
+            color={"white"}
+            component={"h2"}
+            sx={{ mt: 4 }}
+          >
+            {title}
+          </Typography>
+        </Stack>
       </Container>
     </div>
   );
