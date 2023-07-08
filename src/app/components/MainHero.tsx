@@ -15,7 +15,7 @@ export default function MainHero({
   cta: any;
 }) {
   return (
-    <div className="relative isolate overflow-hidden bg-[#02150F] bg-[url('/background.svg')] bg-cover bg-no-repeat bg-blend-soft-light">
+    <div className="relative isolate overflow-hidden bg-[#02150F] bg-[url('/background.svg')] bg-cover bg-no-repeat bg-blend-soft-light lg:min-h-[630px]">
       <svg
         className="inset-0 -z-10 h-full w-full stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
         aria-hidden="true"
