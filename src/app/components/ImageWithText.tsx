@@ -46,7 +46,7 @@ export default function ImageWithText({
         height={props.item.attributes.height}
         alt={props.item.attributes.alternativeText}
         style={{
-          maxHeight: "400px",
+          maxHeight: "600px",
           objectFit: "contain",
           maxWidth: "100%",
           height: "auto",
@@ -70,7 +70,7 @@ export default function ImageWithText({
     >
       <Grid item xs={12} sm={6}>
         {imageMultiple ? (
-          <Carousel>
+          <Carousel indicators={false} duration={500} animation="slide">
             {image.data.map((item, i) => (
               <Item key={i} item={item} />
             ))}
