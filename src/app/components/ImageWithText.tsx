@@ -28,18 +28,17 @@ export default function ImageWithText({
   bodyText: string;
 }) {
   const md = new Remarkable();
-  var items = [
-    {
-      name: "Random Name #1",
-      description: "Probably the most random thing you have ever seen!",
-    },
-    {
-      name: "Random Name #2",
-      description: "Hello World!",
-    },
-  ];
 
-  function Item(props) {
+  function Item(props: {
+    item: {
+      attributes: {
+        url: string;
+        width: number;
+        height: number;
+        alternativeText: string;
+      };
+    };
+  }) {
     return (
       <Image
         src={props.item.attributes.url}
