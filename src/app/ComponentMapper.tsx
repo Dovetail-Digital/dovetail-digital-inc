@@ -18,8 +18,10 @@ const componentMapper: { [key: string]: any } = {
 
 export default function ComponentMapper({
   sectionData,
+  backgroundColor,
 }: {
-  sectionData: { __component: string };
+  sectionData: { __component: string; backgroundColor: string };
+  backgroundColor: string;
 }) {
   const Component = componentMapper[sectionData.__component];
 
@@ -27,5 +29,20 @@ export default function ComponentMapper({
     return <p>NOT FOUND!</p>;
   }
 
-  return <Component {...sectionData} />;
+  if (
+    sectionData.backgroundColor === null ||
+    sectionData.backgroundColor === undefined
+  ) {
+    backgroundColor = "white";
+  }
+
+  const backgroundClassName = "bg-" + backgroundColor;
+
+  console.log("section data:", sectionData);
+
+  return (
+    <div className={backgroundClassName}>
+      <Component {...sectionData} />
+    </div>
+  );
 }

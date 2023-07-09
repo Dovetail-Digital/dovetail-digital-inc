@@ -5,7 +5,22 @@ import ContactUs from "./components/ContactUs";
 export default async function Home() {
   // @todo we may not want to do this, because the URL will always be public..
   const formSparkUrl = String(process.env.FORMSPARK_URL);
-  let homePageData;
+  let homePageData: {
+    data?: [
+      {
+        attributes: {
+          backgroundColor: string;
+          pageComponents: [
+            {
+              __component: string;
+              [key: string]: any;
+            }
+          ];
+        };
+      }
+    ];
+  } = {};
+
   try {
     // The homepage is always going to be / so we can hardcode the following pattern
     const response = await fetch(
@@ -16,14 +31,26 @@ export default async function Home() {
     console.log("Err", err);
   }
 
+  if (homePageData === undefined) {
+    return <p>NOT FOUND!</p>;
+  }
+
+  if (homePageData.data === undefined) {
+    return <p>NOT FOUND!</p>;
+  }
+
+  const backgroundColor = homePageData.data[0].attributes.backgroundColor;
+
   return (
     <>
       {homePageData.data[0].attributes.pageComponents.map(
         (sectionData: any, index: Key) => {
           return (
-            <div className="odd:bg-dovetail-gray">
-              <ComponentMapper key={index} sectionData={sectionData} />
-            </div>
+            <ComponentMapper
+              key={index}
+              sectionData={sectionData}
+              backgroundColor={backgroundColor}
+            />
           );
         }
       )}

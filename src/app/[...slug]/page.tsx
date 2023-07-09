@@ -23,11 +23,7 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
     <>
       {pageData.data[0].attributes.pageComponents.map(
         (sectionData: any, index: Key) => {
-          return (
-            <div className="odd:bg-dovetail-gray">
-              <ComponentMapper key={index} sectionData={sectionData} />
-            </div>
-          );
+          return <ComponentMapper key={index} sectionData={sectionData} />;
         }
       )}
       <div className="bg-white">
