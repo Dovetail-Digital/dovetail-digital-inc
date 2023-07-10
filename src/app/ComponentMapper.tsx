@@ -27,6 +27,7 @@ export default function ComponentMapper({
     return <p>NOT FOUND!</p>;
   }
 
+  console.log(sectionData.global);
   let backgroundColor = sectionData.global?.backgroundColor;
   if (sectionData.global === null || sectionData.global === undefined) {
     backgroundColor = "white";
