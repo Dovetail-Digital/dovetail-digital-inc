@@ -29,7 +29,6 @@ export default async function Home() {
     );
     homePageData = await response.json();
   } catch (err) {
-    console.log("Err", err);
     notFound();
   }
 

@@ -6,7 +6,22 @@ import { notFound } from "next/navigation";
 
 export default async function Page({ params }: { params: { slug: string[] } }) {
   const formSparkUrl = String(process.env.FORMSPARK_URL);
-  let pageData: any;
+  let pageData: {
+    data?: [
+      {
+        attributes: {
+          backgroundColor: string;
+          pageComponents: [
+            {
+              __component: string;
+              [key: string]: any;
+            }
+          ];
+        };
+      }
+    ];
+  } = {};
+
   try {
     const urlSlug = params.slug.join("/");
     // The homepage is always going to be / so we can hardcode the following pattern
@@ -14,17 +29,30 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
       `${process.env.STRAPI_SERVER}/api/landing-pages?filters[url][$eq]=/${urlSlug}&populate[pageComponents][on][banners.logo-banner][populate]=logo.image&populate[pageComponents][on][banners.hero-banner][populate]=*&populate[pageComponents][on][banners.testimonials-banner][populate]=testimonials.profilePicture&populate[pageComponents][on][banners.card-banner][populate]=card.image&populate[pageComponents][on][banners.image-with-text][populate]=*&populate[pageComponents][on][banners.two-column-image][populate]=images&populate[pageComponents][on][banners.secondary-hero][populate]=*`
     );
     pageData = await response.json();
-    if (pageData.data.length === 0) {
-      notFound();
-    }
   } catch (err) {
     notFound();
   }
+  if (pageData === undefined) {
+    notFound();
+  }
+
+  if (pageData.data === undefined) {
+    notFound();
+  }
+
+  const backgroundColor = pageData.data[0].attributes.backgroundColor;
+
   return (
     <>
       {pageData.data[0].attributes.pageComponents.map(
         (sectionData: any, index: Key) => {
-          return <ComponentMapper key={index} sectionData={sectionData} />;
+          return (
+            <ComponentMapper
+              key={index}
+              sectionData={sectionData}
+              backgroundColor={backgroundColor}
+            />
+          );
         }
       )}
       <div className="bg-white">
