@@ -6,21 +6,23 @@ import { notFound } from "next/navigation";
 
 export default async function Page({ params }: { params: { slug: string[] } }) {
   const formSparkUrl = String(process.env.FORMSPARK_URL);
-  let pageData: {
-    data?: [
-      {
-        attributes: {
-          backgroundColor: string;
-          pageComponents: [
-            {
-              __component: string;
-              [key: string]: any;
-            }
-          ];
-        };
+  let pageData:
+    | {
+        data: [
+          {
+            attributes: {
+              backgroundColor: string;
+              pageComponents: [
+                {
+                  __component: string;
+                  [key: string]: any;
+                }
+              ];
+            };
+          }
+        ];
       }
-    ];
-  } = {};
+    | any = {};
 
   try {
     const urlSlug = params.slug.join("/");
@@ -37,6 +39,10 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
   }
 
   if (pageData.data === undefined) {
+    notFound();
+  }
+
+  if (pageData.data.length === 0) {
     notFound();
   }
 
