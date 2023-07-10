@@ -11,7 +11,6 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
         data: [
           {
             attributes: {
-              backgroundColor: string;
               pageComponents: [
                 {
                   __component: string;
@@ -46,19 +45,11 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
     notFound();
   }
 
-  const backgroundColor = pageData.data[0].attributes.backgroundColor;
-
   return (
     <>
       {pageData.data[0].attributes.pageComponents.map(
         (sectionData: any, index: Key) => {
-          return (
-            <ComponentMapper
-              key={index}
-              sectionData={sectionData}
-              backgroundColor={backgroundColor}
-            />
-          );
+          return <ComponentMapper key={index} sectionData={sectionData} />;
         }
       )}
       <div className="bg-white">

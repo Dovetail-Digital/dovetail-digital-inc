@@ -10,7 +10,6 @@ export default async function Home() {
     data?: [
       {
         attributes: {
-          backgroundColor: string;
           pageComponents: [
             {
               __component: string;
@@ -40,19 +39,11 @@ export default async function Home() {
     notFound();
   }
 
-  const backgroundColor = homePageData.data[0].attributes.backgroundColor;
-
   return (
     <>
       {homePageData.data[0].attributes.pageComponents.map(
         (sectionData: any, index: Key) => {
-          return (
-            <ComponentMapper
-              key={index}
-              sectionData={sectionData}
-              backgroundColor={backgroundColor}
-            />
-          );
+          return <ComponentMapper key={index} sectionData={sectionData} />;
         }
       )}
       <div className="bg-white">

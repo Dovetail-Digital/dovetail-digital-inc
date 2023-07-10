@@ -18,10 +18,8 @@ const componentMapper: { [key: string]: any } = {
 
 export default function ComponentMapper({
   sectionData,
-  backgroundColor,
 }: {
-  sectionData: { __component: string; backgroundColor: string };
-  backgroundColor: string;
+  sectionData: { __component: string; global: { backgroundColor: string } };
 }) {
   const Component = componentMapper[sectionData.__component];
 
@@ -29,10 +27,8 @@ export default function ComponentMapper({
     return <p>NOT FOUND!</p>;
   }
 
-  if (
-    sectionData.backgroundColor === null ||
-    sectionData.backgroundColor === undefined
-  ) {
+  let backgroundColor = sectionData.global?.backgroundColor;
+  if (sectionData.global === null || sectionData.global === undefined) {
     backgroundColor = "white";
   }
   const backgroundClassName = "bg-" + backgroundColor;
