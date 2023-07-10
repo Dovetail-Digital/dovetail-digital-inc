@@ -2,6 +2,7 @@ export const revalidate = 60;
 import { Key } from "react";
 import ComponentMapper from "../ComponentMapper";
 import ContactUs from "../components/ContactUs";
+import { notFound } from "next/navigation";
 
 export default async function Page({ params }: { params: { slug: string[] } }) {
   const formSparkUrl = String(process.env.FORMSPARK_URL);
@@ -14,10 +15,10 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
     );
     pageData = await response.json();
     if (pageData.data.length === 0) {
-      return <h2>Page not found</h2>;
+      notFound();
     }
   } catch (err) {
-    console.log("Err", err);
+    notFound();
   }
   return (
     <>

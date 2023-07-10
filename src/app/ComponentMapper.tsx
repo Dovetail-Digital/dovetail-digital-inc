@@ -35,11 +35,7 @@ export default function ComponentMapper({
   ) {
     backgroundColor = "white";
   }
-
   const backgroundClassName = "bg-" + backgroundColor;
-
-  console.log("section data:", sectionData);
-
   return (
     <div className={backgroundClassName}>
       <Component {...sectionData} />

@@ -1,6 +1,7 @@
 import ComponentMapper from "./ComponentMapper";
 import { Key } from "react";
 import ContactUs from "./components/ContactUs";
+import { notFound } from "next/navigation";
 
 export default async function Home() {
   // @todo we may not want to do this, because the URL will always be public..
@@ -29,14 +30,15 @@ export default async function Home() {
     homePageData = await response.json();
   } catch (err) {
     console.log("Err", err);
+    notFound();
   }
 
   if (homePageData === undefined) {
-    return <p>NOT FOUND!</p>;
+    notFound();
   }
 
   if (homePageData.data === undefined) {
-    return <p>NOT FOUND!</p>;
+    notFound();
   }
 
   const backgroundColor = homePageData.data[0].attributes.backgroundColor;
